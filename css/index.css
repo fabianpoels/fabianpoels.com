@@ -1,0 +1,27 @@
+html {
+
+}
+
+body {
+    margin-top: 20%;
+}
+
+h1 {
+    font-family: 'Oswald', sans-serif;
+    padding-left: 10px;
+}
+
+article {
+    width: 360px;
+    margin: 0 auto;
+}
+
+article p {
+    text-align: center;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+article p img {
+    height: 75px;
+    margin: 15px;
+}
