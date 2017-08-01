@@ -41,6 +41,14 @@ article {
     opacity: 1;
 }
 
+.fancybox-caption-wrap {
+    background: none;
+}
+
+.fancybox-caption {
+  border: none;
+}
+
 article p {
     text-align: center;
     font-family: 'Titillium Web', sans-serif;
