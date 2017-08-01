@@ -7,39 +7,60 @@
     <link href="css/main.css" rel="stylesheet">
     <link href="css/index.css" rel="stylesheet">
     <link rel="icon" type="image/png" href='assets/favicon/favicon.png'>
+    <!--fancybox-->
+    <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.min.css">
   </head>
   <body>
     <header>
-
       <h1>FABIAN POELS</h1>
-
       <nav>
         <a href="index.html" class="active">home</a>
         <a href="about.html">about</a>
       </nav>
     </header>
-
     <article>
-
-
       <div class="image-row">
-        <div class="image-flex"><img class="b-lazy" src="placeholder-image.jpg" data-src="photos/20170604_0096.jpg" alt="Some climber" /></div>
-        <div class="image-flex"><img class="b-lazy" src="placeholder-image.jpg" data-src="photos/20170715_0048.jpg" alt="Some climber" /></div>
+        <div class="image-flex">
+          <a href="photos/20170604_0096.jpg" data-fancybox="gallery" data-caption="Compromis chose due - Roche aux Corpias">
+            <img class="b-lazy" src="placeholder-image.jpg" data-src="photos/20170604_0096.jpg" alt="Compromis chose due - Roche aux Corpias" />
+          </a>
+        </div>
+        <div class="image-flex">
+          <a href="photos/20170715_0048.jpg" data-fancybox="gallery" data-caption="Grand Bois">
+            <img class="b-lazy" src="placeholder-image.jpg" data-src="photos/20170715_0048.jpg" alt="Grand Bois" />
+          </a>
+        </div>
       </div>
-
       <div class="image-row">
-        <div class="image-flex"><img class="b-lazy" src="placeholder-image.jpg" data-src="photos/20170603_0028.jpg" alt="Some climber" /></div>
-        <div class="image-flex"><img class="b-lazy" src="placeholder-image.jpg" data-src="photos/20170603_0141.jpg" alt="Some climber" /></div>
-        <div class="image-flex"><img class="b-lazy" src="placeholder-image.jpg" data-src="photos/20170705_0024.jpg" alt="Some climber" /></div>
+        <div class="image-flex">
+          <a href="photos/20170603_0028.jpg" data-fancybox="gallery" data-caption="Led Zeppelin - La Nausée">
+            <img class="b-lazy" src="placeholder-image.jpg" data-src="photos/20170603_0028.jpg" alt="Led Zeppelin - La Nausée" />
+          </a>
+        </div>
+        <div class="image-flex">
+          <a href="photos/20170603_0141.jpg" data-fancybox="gallery" data-caption="Led Zeppelin - La Nausée">
+            <img class="b-lazy" src="placeholder-image.jpg" data-src="photos/20170603_0141.jpg" alt="Led Zeppelin - La Nausée" />
+          </a>
+        </div>
+        <div class="image-flex">
+          <a href="photos/20170714_0040_02.jpg" data-fancybox="gallery" data-caption="Short cut - L'atelier">
+            <img class="b-lazy" src="placeholder-image.jpg" data-src="photos/20170714_0040_02.jpg" alt="Short cut - L'atelier" />
+          </a>
+        </div>
       </div>
-
       <div class="image-row">
       </div>
-
-
     </article>
-
     <script src="js/blazy.min.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script>
+      $("[data-fancybox]").fancybox({
+        buttons : ['fullScreen', 'close'],
+        animationEffect : false,
+        transitionEffect : false,
+      });
+    </script>
   </body>
 </html>
