@@ -33,6 +33,14 @@ article {
     z-index: 10;
 }
 
+.fancybox-bg {
+    background: #000;
+}
+
+.fancybox-is-open .fancybox-bg {
+    opacity: 1;
+}
+
 article p {
     text-align: center;
     font-family: 'Titillium Web', sans-serif;
