@@ -1,0 +1,7 @@
+image: attensee/s3_website
+
+pipelines:
+  default:
+    - step:
+        script:
+          - s3_website push
