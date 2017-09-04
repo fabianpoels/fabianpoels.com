@@ -4,5 +4,6 @@ pipelines:
   default:
     - step:
         script:
-          - s3_website --version
+          - s3_website --help
+          - s3_website -v
           - s3_website push
