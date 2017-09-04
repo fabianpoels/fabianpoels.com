@@ -1,4 +1,5 @@
 s3_id: <%= ENV['S3_ID'] %>
 s3_secret: <%= ENV['S3_SECRET'] %>
 s3_bucket: fabianpoels.com
+s3_signature_version: :v4
 site: /opt/atlassian/pipelines/agent/build
