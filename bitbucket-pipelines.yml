@@ -4,5 +4,4 @@ pipelines:
   default:
     - step:
         script:
-          - echo $S3_SECRET
-          - echo $S3_ID
+          - cat /root/.s3cfg
