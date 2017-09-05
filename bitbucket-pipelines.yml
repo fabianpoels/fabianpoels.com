@@ -4,4 +4,6 @@ pipelines:
   default:
     - step:
         script:
-          - cat /root/.s3cfg
+          - sh /app/configure.sh $S3_ID $S3_SECRET
+          - sh /app/pusher.sh /opt/atlassian/pipelines/agent/build $S3_BUCKET
+          
