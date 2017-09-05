@@ -1,9 +1,8 @@
-image: attensee/s3_website
+image: danvancam/s3-pusher:v1
 
 pipelines:
   default:
     - step:
         script:
-          - s3_website --help
-          - s3_website -v
-          - s3_website push
+          - echo $S3_SECRET
+          - echo $S3_ID
