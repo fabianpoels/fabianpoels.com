@@ -5,5 +5,5 @@ pipelines:
   default:
     - step:
         script:
-          - ls /app
+          - sh /app/configure.sh $S3_ID $S3_SECRET
           - cat /root/.s3cfg
