@@ -4,4 +4,5 @@ pipelines:
   default:
     - step:
         script:
+          - ls /app
           - cat /root/.s3cfg
