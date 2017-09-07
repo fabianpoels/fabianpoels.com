@@ -1,0 +1,19 @@
+{
+  "name": "fabianpoels.com",
+  "version": "1.0.0",
+  "description": "The awesome Fabian Poels climbing and outdoor photography website",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://borissjroetskov@bitbucket.org/danielvancamp/fabianpoels.com.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/danielvancamp/fabianpoels.com#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}
