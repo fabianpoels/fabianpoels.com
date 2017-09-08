@@ -17,7 +17,6 @@ gulp.task('optimize', function(){
     .pipe(gulp.dest('dist'));
 });
 
-
 gulp.task('analyticsJs', function(){
   return gulp.src('src/js/googleAnalytics.js')
     .pipe(gulpIf('*.js', uglify()))
@@ -26,6 +25,7 @@ gulp.task('analyticsJs', function(){
 
 gulp.task('photos', function(){
   return gulp.src('src/photos/*')
+    .pipe(imagemin())
     .pipe(gulp.dest('dist/photos'));;
 });
 
