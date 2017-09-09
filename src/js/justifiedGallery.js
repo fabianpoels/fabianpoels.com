@@ -1,5 +1,5 @@
 $("#gallery").justifiedGallery({
-  rowHeight : 350,
+  rowHeight : 400,
   lastRow : 'nojustify',
   waitThumbnailsLoad : false,
   margins : 30,
