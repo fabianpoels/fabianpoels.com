@@ -48,3 +48,14 @@ nav a.active {
 article  {
     padding: 0 55px;
 }
+
+footer {
+    text-align: center;
+    font-family: 'titillium Web', sans-serif;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+footer a {
+    color: #6aac95;
+}
