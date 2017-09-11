@@ -40,5 +40,5 @@ gulp.task('clean:dist', function(){
 });
 
 gulp.task('default', function(callback){
-  runSequence('clean:dist', ['optimize', 'analyticsJs', 'photos', 'assets'], callback);
+  runSequence('clean:dist', ['optimize', 'analyticsJs', 'assets'], callback);
 })
