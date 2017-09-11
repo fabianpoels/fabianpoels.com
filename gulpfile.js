@@ -25,7 +25,6 @@ gulp.task('analyticsJs', function(){
 
 gulp.task('photos', function(){
   return gulp.src('src/photos/*')
-    .pipe(imagemin())
     .pipe(gulp.dest('dist/photos'));;
 });
 
@@ -40,5 +39,5 @@ gulp.task('clean:dist', function(){
 });
 
 gulp.task('default', function(callback){
-  runSequence('clean:dist', ['optimize', 'analyticsJs', 'assets'], callback);
+  runSequence('clean:dist', ['optimize', 'analyticsJs','photos', 'assets'], callback);
 })
