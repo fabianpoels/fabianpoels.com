@@ -12,6 +12,11 @@ $("#gallery").justifiedGallery({
     buttons : ['fullScreen', 'close'],
     animationEffect : false,
     transitionEffect : false,
-    backFocus : false,
+    backFocus : true,
+    helpers : {
+        overlay : {
+            locked : false
+        }
+    }
   });
 });
