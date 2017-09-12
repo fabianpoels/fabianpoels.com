@@ -1,4 +1,4 @@
-$("[data-fancybox]").fancybox({
+/*$("[data-fancybox]").fancybox({
   loop: true,
   idleTime : 2,
   margin : [20, 0],
@@ -7,3 +7,4 @@ $("[data-fancybox]").fancybox({
   transitionEffect : false,
   backFocus : false,
 });
+*/
