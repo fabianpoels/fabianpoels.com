@@ -7,6 +7,7 @@ var del = require('del');
 var runSequence = require('run-sequence');
 var htmlmin = require('gulp-htmlmin');
 var imagemin = require('gulp-imagemin');
+var pug = require('gulp-pug');
 
 gulp.task('optimize', function(){
   return gulp.src('src/*.html')
@@ -32,10 +33,17 @@ gulp.task('assets', function(){
   return gulp.src('src/assets/**/*.+(png|svg)')
     .pipe(imagemin())
     .pipe(gulp.dest('dist/assets'));
-})
+});
 
 gulp.task('clean:dist', function(){
   return del.sync('dist');
+});
+
+gulp.task('buildHTML', function buildHTML() {
+  return gulp.src('*.pug')
+    .pipe(pug({})
+    .pipe(gulp.dest('dist'))
+  );
 });
 
 gulp.task('default', function(callback){
