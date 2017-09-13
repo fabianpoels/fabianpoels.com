@@ -2,7 +2,7 @@ $("#gallery").justifiedGallery({
   rowHeight : 400,
   lastRow : 'nojustify',
   waitThumbnailsLoad : false,
-  margins : 30,
+  margins : 10,
   captions: false,
 }).on('jg.complete', function() {
   $("[data-fancybox]").fancybox({
@@ -13,10 +13,5 @@ $("#gallery").justifiedGallery({
     animationEffect : false,
     transitionEffect : false,
     backFocus : true,
-    helpers : {
-        overlay : {
-            locked : false
-        }
-    }
   });
 });

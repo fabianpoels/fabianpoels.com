@@ -2,35 +2,6 @@
 article {
     margin: 0 auto;
 }
-.image-row {
-    display: flex;
-    align-items: stretch;
-    align-content: stretch;
-}
-.image-row:first-child > .image-flex {
-    margin-top: 0;
-}
-.image-row .image-flex {
-    flex-grow: 1;
-    margin: 25px;
-}
-.image-row .image-flex:first-child {
-    margin-left: 0;
-}
-.image-row .image-flex:last-child {
-    margin-right: 0;
-}
-
-.image-row .image-flex img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.image-row .image-flex:hover {
-    background: rgba(0,0,0,.3);
-    z-index: 10;
-}
 
 .fancybox-bg {
     background: #000;
