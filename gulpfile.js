@@ -49,7 +49,7 @@ gulp.task('dist', function(callback){
 
 //dist to production tasks
 
-gulp.task('optimize', function(){
+gulp.task('production:optimize', function(){
   return gulp.src('dist/*.html')
     .pipe(useref())
     .pipe(gulpIf('*.js', uglify()))
@@ -64,15 +64,21 @@ gulp.task('production:analyticsJs', function(){
     .pipe(gulp.dest('production/js'));
 })
 
-gulp.task('photos', function(){
+gulp.task('production:photos', function(){
   return gulp.src('dist/photos/*')
     .pipe(gulp.dest('production/photos'));;
 });
 
-gulp.task('assets', function(){
+gulp.task('production:assets', function(){
   return gulp.src('dist/assets/**/*.+(png|svg)')
     .pipe(imagemin())
     .pipe(gulp.dest('production/assets'));
+});
+
+gulp.task('production:sitemap', function(){
+  return gulp.src('src/sitemap/sitemap.xml')
+    .pipe(imagemin())
+    .pipe(gulp.dest('production/sitemap/sitemap.xml'));
 });
 
 gulp.task('production:clean', function(){
@@ -80,5 +86,5 @@ gulp.task('production:clean', function(){
 });
 
 gulp.task('production', function(callback){
-  runSequence('production:clean', ['optimize', 'production:analyticsJs','photos', 'assets'], callback);
+  runSequence('production:clean', ['production:optimize', 'production:analyticsJs','production:photos', 'production:assets', 'production:sitemap'], callback);
 });
