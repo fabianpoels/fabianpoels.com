@@ -1,0 +1,25 @@
+
+article {
+    margin: 0 auto;
+}
+
+.fancybox-bg {
+    background: #000;
+}
+
+.fancybox-is-open .fancybox-bg {
+    opacity: 1;
+}
+
+.fancybox-caption-wrap {
+    background: none;
+}
+
+.fancybox-caption {
+  border: none;
+}
+
+article p {
+    text-align: center;
+    font-family: 'Titillium Web', sans-serif;
+}

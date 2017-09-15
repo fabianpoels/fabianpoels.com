@@ -1,7 +1,25 @@
-include pug/mixins.pug
-
 mixin navigation(page)
   nav
-    a(href='index.html') home
-    a(href='about.html') about
-    a(href='contact.html') contact
+    if (page=='home')
+      a.active(href='index.html') home
+    else
+      a(href='index.html' ) home
+    if (page=='about')
+      a.active(href='about.html') about
+    else
+      a(href='about.html') about
+    if (page=='contact')
+      a.active(href='contact.html') contact
+    else
+      a(href='contact.html') contact
+
+mixin galleryItem(image, description, width, height)
+  a(href=image, data-fancybox='gallery', data-caption=description)
+    img(src=image, alt=description, width=width, height=height)
+
+mixin footer(page)
+  footer
+    if (page=='disclaimer')
+      |All photos &#169;2017 Fabian Poels ~ web-wizardry by <a href="http://bonos.be">bonos.be</a> &amp; <a href="http://annelienvandenbosch.be">annelienvandenbosch.be</a>
+    else
+      <a href="disclaimer.html">All photos &#169;2017 Fabian Poels</a> ~ web-wizardry by <a href="http://bonos.be">bonos.be</a> &amp; <a href="http://annelienvandenbosch.be">annelienvandenbosch.be</a>

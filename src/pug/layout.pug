@@ -2,6 +2,7 @@ doctype html
 html
   head
     title Fabian Poels | Climbing &amp; outdoor photography
+    link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Oswald|Titillium+Web')
     // build:css css/index.min.css
     block styles
       link(rel='stylesheet', type='text/css', href='css/main.css')
@@ -12,3 +13,10 @@ html
       img(src='assets/svg/logo.svg', width='70')
       h1 FABIAN POELS
       block navigation
+    article
+      block mainContent
+    block footer
+    // build:js js/main.min.js
+    block scripts
+    // endbuild
+    script(src='js/googleAnalytics.js')
