@@ -23,3 +23,9 @@ mixin footer(page)
       |All photos &#169;2017 Fabian Poels ~ web-wizardry by <a href="http://bonos.be">bonos.be</a> &amp; <a href="http://annelienvandenbosch.be">annelienvandenbosch.be</a>
     else
       <a href="disclaimer.html">All photos &#169;2017 Fabian Poels</a> ~ web-wizardry by <a href="http://bonos.be">bonos.be</a> &amp; <a href="http://annelienvandenbosch.be">annelienvandenbosch.be</a>
+
+mixin route(name, info, comment)
+  li.route
+    span.route-name= name
+    span.route-info= info
+    span.route-comment= comment
