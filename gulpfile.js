@@ -46,6 +46,15 @@ gulp.task('buildHTML', function buildHTML() {
   );
 });
 
+gulp.task('pugtest', function() {
+  return gulp.src('src/*.pug')
+    .pipe(pug({
+      doctype: 'html',
+      pretty: true
+    }))
+    .pipe(gulp.dest('pugtest'));
+});
+
 gulp.task('default', function(callback){
   runSequence('clean:dist', ['optimize', 'analyticsJs','photos', 'assets'], callback);
 })

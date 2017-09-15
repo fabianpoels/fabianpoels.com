@@ -1,6 +1,9 @@
-doctype html
-html
-  include head.pug
-  body
-    header
-      
+extends pug/layout.pug
+
+block append styles
+  link(rel='stylesheet', type='text/css', href='css/jquery.fancybox.min.css')
+  link(rel='stylesheet', type='text/css', href='css/justifiedGallery.min.css')
+  link(rel='stylesheet', type='text/css', href='css/index.css')
+
+block navigation
+  
