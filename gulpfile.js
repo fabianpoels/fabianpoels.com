@@ -41,7 +41,7 @@ gulp.task('dist:js', function(){
 
 gulp.task('dist:sitemap', function(){
   return gulp.src('src/sitemap/sitemap.xml')
-    .pipe(gulp.dest('dist/sitemap/sitemap.xml'));
+    .pipe(gulp.dest('dist/sitemap/'));
 });
 
 gulp.task('dist:clean', function(){
@@ -82,7 +82,7 @@ gulp.task('production:assets', function(){
 
 gulp.task('production:sitemap', function(){
   return gulp.src('src/sitemap/sitemap.xml')
-    .pipe(gulp.dest('production/sitemap/sitemap.xml'));
+    .pipe(gulp.dest('production/sitemap/'));
 });
 
 gulp.task('production:clean', function(){
