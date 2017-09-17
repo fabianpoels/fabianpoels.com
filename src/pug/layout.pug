@@ -5,18 +5,23 @@ html
     meta(name='dcterms.rightsHolder' content='fabianpoels.com')
     meta(name='dcterms.dateCopyrighted' content='2017')
     link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Oswald|Titillium+Web')
-    // build:css css/index.min.css
     block styles
+      // build:css css/index.min.css
       link(rel='stylesheet', type='text/css', href='css/main.css')
-    // endbuild
+      link(rel='stylesheet', type='text/css', href='css/jquery.fancybox.min.css')
+      link(rel='stylesheet', type='text/css', href='css/justifiedGallery.min.css')
+      link(rel='stylesheet', type='text/css', href='css/index.css')
+      link(rel='stylesheet', type='text/css', href='css/about.css')
+      link(rel='stylesheet', type='text/css', href='css/disclaimer.css')
+      link(rel='stylesheet', type='text/css', href='css/contact.css')
+      // endbuild
     link(rel='icon', type='image/png', href='assets/favicon/favicon.png')
   body
     header
       img(src='assets/svg/logo.svg', width='70')
       h1 FABIAN POELS
       block navigation
-    article
-      block mainContent
+    block mainContent
     block footer
     // build:js js/main.min.js
     block scripts

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>http://fabianpoels.com/index.html</loc>
+    <image:image>
+      <image:loc>http://fabianpoels.com/photos/fabianpoels_20170910_0121_web.jpg</image:loc>
+      <image:caption>Hybride - Rocher de la Nausee (BELGIUM)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>http://fabianpoels.com/photos/fabianpoels_20170825_0055_web.jpg</image:loc>
+      <image:caption>Tete de Gaulent (FRANCE)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>http://fabianpoels.com/photos/fabianpoels_20170817_0083_web.jpg</image:loc>
+      <image:caption>Short cut - L&apos;atelier (FRANCE)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>http://fabianpoels.com/photos/fabianpoels_20170820_0058_web.jpg</image:loc>
+      <image:caption>Grotta raptor - Grotte d&apos;Oréac (FRANCE)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>http://fabianpoels.com/photos/fabianpoels_20170805_0073_web.jpg</image:loc>
+      <image:caption>Hybride - Rocher de la Nausee (BELGIUM)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>http://fabianpoels.com/photos/fabianpoels_20170820_0196_web.jpg</image:loc>
+      <image:caption>Grotte d&apos;Oréac (FRANCE)r</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>http://fabianpoels.com/photos/fabianpoels_20170604_0096_web.jpg</image:loc>
+      <image:caption>Compromis chose due - Roche aux Corpias (FRANCE)</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>http://fabianpoels.com/photos/fabianpoels_20170603_0141_web.jpg</image:loc>
+      <image:caption>Led Zeppelin - La Nausée (BELGIUM)</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>http://fabianpoels.com/about.html</loc>
+  </url>
+  <url>
+    <loc>http://fabianpoels.com/contact.html</loc>
+  </url>
+  <url>
+    <loc>http://fabianpoels.com/disclaimer.html</loc>
+  </url>
+</urlset>

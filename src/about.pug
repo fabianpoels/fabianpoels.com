@@ -1,33 +1,31 @@
 extends pug/layout.pug
 include pug/mixins.pug
 
-block append styles
-  link(rel='stylesheet', type='text/css', href='css/about.css')
-
 block navigation
   +navigation('about')
 
 block mainContent
-  h2 Likes
-  ul
-    li Moving across rock surfaces in various directions
-    li Shitting in the woods
-    li Digging holes for shitting in the woods
-    li Brewing coffee
-    li Taking pictures of rocks with people on them
-    li Waking up without an alarm clock
-  h2 Profession
-  ul
-    li Teaching people how not to die when climbing
-    li Inducing monkey-like behavior in kids aged 9 - 16
-    li Transforming professional skiers into mediocre snowboarders
-    li Fulltime teacher and pupil at the school of life
-  h2 Most memorable ascents
-  ul
-    +route('La Sylvia', '(7c, Freyr, Belgium)', '~ 30m of typical Freyr-limestone climbing, one of my personal favorites')
-    +route('Malagueña salerosa', '(7a, Margalef, Spain)', '~ First 7a onsight, a personal milestone I believed to be impossible when I first started climbing')
-    +route('Ardéchoice quality', '(7a, Mazet plage, Ardèche, France)', '~ Still one of the best 7a’s i’ve climbed so far. Perfect rock, striking line, technical climbing, runout when it get’s ‘easier’, a must do when you’re in the neighbourhood')
-    +route('Tour Termier: Boucs en stocks', '(TD 270m 6b+, 6a+ obligatoire, Tour Termier, France)', '~ Cruising on good rock with a nice top-out and stunning views over the Ecrins')
+  article
+    h2 Likes
+    ul
+      li Moving across rock surfaces in various directions
+      li Shitting in the woods
+      li Digging holes for shitting in the woods
+      li Brewing coffee
+      li Taking pictures of rocks with people on them
+      li Waking up without an alarm clock
+    h2 Profession
+    ul
+      li Teaching people how not to die when climbing
+      li Inducing monkey-like behavior in kids aged 9 - 16
+      li Transforming professional skiers into mediocre snowboarders
+      li Fulltime teacher and pupil at the school of life
+    h2 Most memorable ascents
+    ul
+      +route('La Sylvia', '(7c, Freyr, Belgium)', '~ 30m of typical Freyr-limestone climbing, one of my personal favorites')
+      +route('Malagueña salerosa', '(7a, Margalef, Spain)', '~ First 7a onsight, a personal milestone I believed to be impossible when I first started climbing')
+      +route('Ardéchoice quality', '(7a, Mazet plage, Ardèche, France)', '~ Still one of the best 7a’s i’ve climbed so far. Perfect rock, striking line, technical climbing, runout when it get’s ‘easier’, a must do when you’re in the neighbourhood')
+      +route('Tour Termier: Boucs en stocks', '(TD 270m 6b+, 6a+ obligatoire, Tour Termier, France)', '~ Cruising on good rock with a nice top-out and stunning views over the Ecrins')
 
 block footer
   +footer('about')

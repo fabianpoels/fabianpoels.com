@@ -39,12 +39,17 @@ gulp.task('dist:js', function(){
     .pipe(gulp.dest('dist/js'));;
 });
 
+gulp.task('dist:sitemap', function(){
+  return gulp.src('src/sitemap/sitemap.xml')
+    .pipe(gulp.dest('dist/sitemap/sitemap.xml'));
+});
+
 gulp.task('dist:clean', function(){
   return del.sync('dist');
 });
 
 gulp.task('dist', function(callback){
-  runSequence('dist:clean', ['dist:html', 'dist:assets', 'dist:photos', 'dist:css', 'dist:js'], callback);
+  runSequence('dist:clean', ['dist:html', 'dist:assets', 'dist:photos', 'dist:css', 'dist:js', 'dist:sitemap'], callback);
 });
 
 //dist to production tasks
@@ -77,7 +82,6 @@ gulp.task('production:assets', function(){
 
 gulp.task('production:sitemap', function(){
   return gulp.src('src/sitemap/sitemap.xml')
-    .pipe(imagemin())
     .pipe(gulp.dest('production/sitemap/sitemap.xml'));
 });
 
