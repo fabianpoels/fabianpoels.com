@@ -26,6 +26,6 @@ mixin footer(page)
 
 mixin route(name, info, comment)
   li.route
-    span.route-name= name
-    span.route-info= info
-    span.route-comment= comment
+    span.route-name!= name
+    span.route-info!= info
+    span.route-comment!= comment
