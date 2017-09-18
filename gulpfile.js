@@ -59,7 +59,7 @@ gulp.task('production:optimize', function(){
     .pipe(useref())
     .pipe(gulpIf('*.js', uglify()))
     .pipe(gulpIf('*.css', cssnano()))
-    .pipe(gulpIf('*.html', htmlmin({collapseWhitespace: true})))
+    .pipe(gulpIf('*.html', htmlmin({collapseWhitespace: true, decodeEntities: true})))
     .pipe(gulp.dest('production'));
 });
 
