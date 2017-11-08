@@ -20,6 +20,10 @@ article {
 }
 
 article p {
-    text-align: center;
-    font-family: 'Titillium Web', sans-serif;
+  text-align: center;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+article a:focus {
+  outline: none;
 }
