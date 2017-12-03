@@ -4,6 +4,10 @@ mixin navigation(page)
       a.active(href='index.html') home
     else
       a(href='index.html') home
+    if (page=='portfolio')
+      a.active(href='portfolio.html') portfolio
+    else
+      a(href='portfolio.html') portfolio
     if (page=='about')
       a.active(href='about.html') about
     else
