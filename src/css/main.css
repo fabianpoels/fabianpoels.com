@@ -39,11 +39,11 @@ nav a {
 
 nav a#instagram {
     border: none;
-    padding: none;
 }
 
 nav a#instagram img{
     vertical-align: middle;
+    margin-top: -4px;
 }
 
 nav a:hover {
