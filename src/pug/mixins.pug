@@ -16,6 +16,8 @@ mixin navigation(page)
       a.active(href='contact.html') contact
     else
       a(href='contact.html') contact
+    a#instagram(href='https://www.instagram.com/fabianpoels/' target='_blank')
+      img(src='assets/png/instagram-logo.png' alt='instagram' width='20' height='20')
 
 mixin galleryItem(image, description, width, height)
   a(href=image, data-fancybox='gallery', data-caption=description)

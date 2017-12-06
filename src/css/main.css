@@ -36,10 +36,25 @@ nav a {
     padding: 3px 8px;
     border: 1px solid #333333;
 }
+
+nav a#instagram {
+    border: none;
+    padding: none;
+}
+
+nav a#instagram img{
+    vertical-align: middle;
+}
+
 nav a:hover {
     background: #333333;
     color: white;
 }
+
+nav a#instagram:hover {
+    background: none;
+}
+
 nav a.active {
     background: #333333;
     color: white;
