@@ -2,7 +2,7 @@ extends pug/layout.pug
 include pug/mixins.pug
 
 block page
-  title Portfolio - Fabian Poels
+  title Fabian Poels portfolio
   meta(name='description' content='Fabian Poels photography portfolio')
 
 block navigation
@@ -11,20 +11,18 @@ block navigation
 block mainContent
   article
     div#portfolio
-      +galleryItem('photos/fabianpoels_20171105_gumbi-ilcagasotto_web.jpg', 'Il Cagasotto - Gumbi, Toirano (ITALY)', 2396, 1500)
-      +galleryItem('photos/fabianpoels_20171013_ruben-bayouninja-freyr_web.jpg', 'Ruben in Bayou-Ninja, Freyr (BELGIUM)', 1088, 1500)
-      +galleryItem('photos/fabianpoels_20171103_taccheticche-bausucentrale_web.jpg', 'Liesbeth on the technical start of Tacche Ticche - Bausu Centrale, Albenga (ITALY)', 2980, 1500)
-      +galleryItem('photos/fabianpoels_20171101_gulin-lafamiglia_web.jpg', 'Arne on the last hard moves of Gulin - La Famiglia, Albenga (ITALY)', 3075, 1500)
-      +galleryItem('photos/fabianpoels_20171013_tess-prisestaillees-freyr_web.jpg', 'Tess in Prises Taillees, Freyr (BELGIUM)', 1049, 1500 )
-      +galleryItem('photos/fabianpoels_20171006_tessklimax_web.jpg', 'Tess in Klimax II (Puurs, BELGIUM)', 2860, 1500)
-      +galleryItem('photos/fabianpoels_20170910_hybride-lanausee_web.jpg', 'Hybride - Rocher de la Naus&eacute;e (BELGIUM)', 1001, 1500)
-      +galleryItem('photos/fabianpoels_20170825_tetedegaulent_web.jpg', 'Tete de Gaulent (FRANCE)', 2247, 1500)
-      +galleryItem('photos/fabianpoels_20170817_shortcut-latelier_web.jpg', 'Short cut - L\'atelier (FRANCE)', 1001, 1500)
-      +galleryItem('photos/fabianpoels_20170820_grottaraptor-grottedoreac_web.jpg', 'Grotta raptor - Grotte d\'Or&eacute;ac (FRANCE)', 2247, 1500)
-      +galleryItem('photos/fabianpoels_20170805_hybride-lanausee_web.jpg', 'Hybride - Rocher de la Naus&eacute;e (BELGIUM)', 2247, 1500)
-      +galleryItem('photos/fabianpoels_20170820_grottedoreac_web.jpg', 'Grotte d\'Or&eacute;ac (FRANCE)', 2284, 1500)
-      +galleryItem('photos/fabianpoels_20170604_compromischosedue-rocheauxcorpias_web.jpg', 'Compromis chose due - Roche aux Corpias (FRANCE)', 1001, 1500)
-      +galleryItem('photos/fabianpoels_20170603_ledzeppelin-lanausee_web.jpg', 'Led Zeppelin - La Naus&eacute;e (BELGIUM)', 1001, 1500)
+      details
+        summary climbing
+        div#climbing
+          +portfolioImage('photos/fabianpoels_20171105_gumbi-ilcagasotto_web.jpg', 'Il Cagasotto - Gumbi, Toirano (ITALY)', 'climbing', 2396, 1500)
+          +portfolioImage('photos/fabianpoels_20171013_ruben-bayouninja-freyr_web.jpg', 'Ruben in Bayou-Ninja, Freyr (BELGIUM)', 'climbing', 1088, 1500)
+          +portfolioImage('photos/fabianpoels_20171103_taccheticche-bausucentrale_web.jpg', 'Liesbeth on the technical start of Tacche Ticche - Bausu Centrale, Albenga (ITALY)', 'climbing', 2980, 1500)
+      details
+        summary portrait
+        div#portrait
+          +portfolioImage('portfolio/fabianpoels_20171124_daniel_portrait_web.jpg', '', 'portrait', 1373, 1200)
+          +portfolioImage('portfolio/fabianpoels_20171126_annelien_portrait_web.jpg', '', 'portrait', 1797, 1200)
+          +portfolioImage('portfolio/fabianpoels_20171126_dries_portrait_web.jpg', '', 'portrait', 1865, 1200)
 
 block footer
   +footer('home')
@@ -33,4 +31,4 @@ block scripts
   script(src='js/jquery-3.2.1.min.js')
   script(src='js/jquery.fancybox.min.js')
   script(src='js/jquery.justifiedGallery.min.js')
-  script(src='js/imageGallery.js')
+  script(src='js/portfolioGallery.js')
