@@ -6,7 +6,7 @@ $("#gallery").justifiedGallery({
   captions: false,
 }).on('jg.complete', function() {
   $("[data-fancybox]").fancybox({
-    loop: false,
+    loop: true,
     idleTime : 2,
     margin : [20, 0],
     buttons : ['fullScreen', 'close'],
