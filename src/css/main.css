@@ -22,12 +22,12 @@ header img {
     margin-right: 10px;
 }
 
-nav {
+header nav {
     vertical-align: middle;
     text-align: right   ;
 }
 
-nav a {
+header nav a {
     color: #333333;
     text-decoration: none;
     font-family: 'Titillium Web', sans-serif;
@@ -37,25 +37,11 @@ nav a {
     border: 1px solid #333333;
 }
 
-nav a#instagram {
-    border: none;
-}
-
-nav a#instagram img{
-    vertical-align: middle;
-    margin-top: -4px;
-}
-
-nav a:hover {
+header nav a:hover {
     background: #333333;
     color: white;
 }
-
-nav a#instagram:hover {
-    background: none;
-}
-
-nav a.active {
+header nav a.active {
     background: #333333;
     color: white;
 }

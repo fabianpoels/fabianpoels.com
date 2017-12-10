@@ -20,12 +20,23 @@ mixin navigation(page)
       a#instagram(href='https://www.instagram.com/fabianpoels/' target='_blank')
         img(src='assets/png/instagram-logo.png' alt='instagram' width='35' height='35')
 
+mixin portfolioNavigation(page)
+  nav
+    if (page=='climbing')
+      a.active(href='climbing.html') climbing
+    else
+      a(href='climbing.html') climbing
+    if (page=='portrait')
+      a.active(href='portrait.html') portrait
+    else
+      a(href='portrait.html') portrait
+    if (page=='outdoor')
+      a.active(href='outdoor.html') outdoor
+    else
+      a(href='outdoor.html') outdoor
+
 mixin galleryItem(image, description, width, height)
   a(href=image, data-fancybox='gallery', data-caption=description)
-    img(src=image, alt=description, width=width, height=height)
-
-mixin portfolioImage(image, description, gallery, width, height)
-  a(href=image, data-fancybox=gallery, data-caption=description)
     img(src=image, alt=description, width=width, height=height)
 
 mixin footer(page)

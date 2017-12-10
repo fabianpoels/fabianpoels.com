@@ -1,7 +1,21 @@
-#portfolio summary:focus {
-  outline: none;
+#portfolio nav {
+  text-align: center;
+  margin: 20px 0;
+  font-family: 'Titillium Web', sans-serif;
 }
 
-#portfolio summary {
-    font-size: 22px;
+#portfolio nav a {
+  font-size: 22px;
+  margin-right: 50px;
+  padding: 10px;
+  color: #333333;
+  text-decoration: none;
+}
+
+#portfolio nav a:hover {
+  border-bottom: 1px solid #333333;
+}
+
+#portfolio nav a.active {
+  border-bottom: 1px solid #333333;
 }
