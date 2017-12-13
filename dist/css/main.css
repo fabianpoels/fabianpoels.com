@@ -69,4 +69,11 @@ footer {
 
 footer a {
     color: #6aac95;
+    text-decoration: none;
+    padding: 0 3px;
+}
+
+footer a:hover {
+    color: #fff;
+    background-color: #6aac95;
 }

@@ -30,7 +30,7 @@ gulp.task('dist:photos', function(){
 });
 
 gulp.task('dist:portfolio', function(){
-  return gulp.src('src/portfolio/*')
+  return gulp.src('src/portfolio/**/*.jpg')
     .pipe(gulp.dest('dist/portfolio'));;
 });
 

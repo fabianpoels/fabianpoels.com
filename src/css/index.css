@@ -3,6 +3,13 @@ article {
     margin: 0 auto;
 }
 
+article img#intro {
+  margin-top: 10px;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}
+
 .fancybox-bg {
     background: #000;
 }
