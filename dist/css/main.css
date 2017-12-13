@@ -2,15 +2,11 @@ html {
   height: 100%;
 }
 
-
-
 body {
     margin: 0 auto;
     width: 82%;
     min-height: 100%;
     position: relative;
-    /*background: url(../photos/fabianpoels_20171103_taccheticche-bausucentrale_web.jpg);
-    background-size: cover;*/
 }
 
 header {
