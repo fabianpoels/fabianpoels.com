@@ -5,9 +5,9 @@ mixin navigation(page)
     else
       a(href='index.html') home
     if (page=='portfolio')
-      a.active(href='portfolio.html') portfolio
+      a.active(href='climbing.html') portfolio
     else
-      a(href='portfolio.html') portfolio
+      a(href='climbing.html') portfolio
     if (page=='about')
       a.active(href='about.html') about
     else
@@ -26,14 +26,14 @@ mixin portfolioNavigation(page)
       a.active(href='climbing.html') climbing
     else
       a(href='climbing.html') climbing
-    if (page=='portrait')
+    //if (page=='portrait')
       a.active(href='portrait.html') portrait
-    else
-      a(href='portrait.html') portrait
-    if (page=='outdoor')
-      a.active(href='outdoor.html') outdoor
-    else
-      a(href='outdoor.html') outdoor
+      else
+        a(href='portrait.html') portrait
+      if (page=='outdoor')
+        a.active(href='outdoor.html') outdoor
+      else
+        a(href='outdoor.html') outdoor
 
 mixin galleryItem(image, description, width, height)
   a(href=image, data-fancybox='gallery', data-caption=description)
