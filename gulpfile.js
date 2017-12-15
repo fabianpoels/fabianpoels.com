@@ -89,6 +89,11 @@ gulp.task('production:portfolio', function () {
     .pipe(gulp.dest('production/portfolio'))
 })
 
+gulp.task('production:stories', function () {
+  return gulp.src('dist/stories/**/*.jpg')
+    .pipe(gulp.dest('production/stories'))
+})
+
 gulp.task('production:assets', function () {
   return gulp.src('dist/assets/**/*.+(png|svg)')
     .pipe(imagemin())
@@ -105,5 +110,5 @@ gulp.task('production:clean', function () {
 })
 
 gulp.task('production', function (callback) {
-  runSequence('production:clean', ['production:optimize', 'production:analyticsJs', 'production:photos', 'production:portfolio', 'production:assets', 'production:sitemap'], callback)
+  runSequence('production:clean', ['production:optimize', 'production:analyticsJs', 'production:photos', 'production:portfolio', 'production:stories', 'production:assets', 'production:sitemap'], callback)
 })
