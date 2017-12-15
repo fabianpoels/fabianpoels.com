@@ -34,6 +34,11 @@ gulp.task('dist:portfolio', function () {
     .pipe(gulp.dest('dist/portfolio'))
 })
 
+gulp.task('dist:stories', function () {
+  return gulp.src('src/stories/**/*.jpg')
+    .pipe(gulp.dest('dist/stories'))
+})
+
 gulp.task('dist:css', function () {
   return gulp.src('src/css/*')
     .pipe(gulp.dest('dist/css'))
@@ -54,7 +59,7 @@ gulp.task('dist:clean', function () {
 })
 
 gulp.task('dist', function (callback) {
-  runSequence('dist:clean', ['dist:html', 'dist:assets', 'dist:photos', 'dist:portfolio', 'dist:css', 'dist:js', 'dist:sitemap'], callback)
+  runSequence('dist:clean', ['dist:html', 'dist:assets', 'dist:photos', 'dist:portfolio', 'dist:stories', 'dist:css', 'dist:js', 'dist:sitemap'], callback)
 })
 
 // dist to production tasks

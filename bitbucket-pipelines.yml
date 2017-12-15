@@ -1,9 +1,0 @@
-image: danvancam/s3-pusher:v1
-
-pipelines:
-  branches:
-      master:
-        - step:
-            script:
-              - sh /app/configure.sh $S3_ID $S3_SECRET
-              - sh /app/pusher.sh /opt/atlassian/pipelines/agent/build/dist $S3_BUCKET

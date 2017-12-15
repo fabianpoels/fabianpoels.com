@@ -8,6 +8,10 @@ mixin navigation(page)
       a.active(href='climbing.html') portfolio
     else
       a(href='climbing.html') portfolio
+    if (page=='stories')
+      a.active(href='stories.html') stories
+    else
+      a(href='stories.html') stories
     if (page=='about')
       a.active(href='about.html') about
     else
@@ -34,6 +38,17 @@ mixin portfolioNavigation(page)
         a.active(href='outdoor.html') outdoor
       else
         a(href='outdoor.html') outdoor
+
+mixin storiesNavigation(page)
+  nav
+    if (page=='albenga')
+      a.active(href='albenga.html') Albenga
+    else
+      a(href='albenga.html') Albenga
+    if (page=='tess')
+      a.active(href='tess.html') Tess
+    else
+      a(href='tess.html') Tess
 
 mixin galleryItem(image, description, width, height)
   a(href=image, data-fancybox='gallery', data-caption=description)
