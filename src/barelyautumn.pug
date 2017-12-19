@@ -1,0 +1,26 @@
+extends stories.pug
+include pug/mixins.pug
+
+block page
+  title Barely Autumn @ Ancienne Belgique
+  meta(name='description' content='Barely Autumn plays at the Ancienne Belgique photo story')
+
+block mainContent
+  div#portfolio
+    +storiesNavigation('barelyautumn')
+    article
+      p
+        | Since I know the drummer quite well, I got the opportunity to shoot the up-and-coming indie rock band
+        |
+        a(href="http://www.barelyautumn.com" target='_blank') Barely Autumn
+        | . From rehearsing in a tiny dark shed to loading the equipment in the van, and finally some nerves before going on stage at the Ancienne Belgique; I got to witness it up close.
+      div#gallery
+        +galleryItem('stories/barelyautumn/fabianpoels_20171215_barelyautumn_gil_web.jpg', '', 1797, 1200)
+        +galleryItem('stories/barelyautumn/fabianpoels_20171215_barelyautumn_nico_web.jpg', '', 1797, 1200)
+        +galleryItem('stories/barelyautumn/fabianpoels_20171215_barelyautumn_studio_web.jpg', '', 801, 1200)
+        +galleryItem('stories/barelyautumn/fabianpoels_20171215_barelyautumn_chillax_web.jpg', '', 1797, 1200)
+        +galleryItem('stories/barelyautumn/fabianpoels_20171218_barelyautumn_nico_unloading_guitar_web.jpg', '', 1797, 1200)
+        +galleryItem('stories/barelyautumn/fabianpoels_20171218_barelyautumn_nico_soundcheck_web.jpg', '', 801, 1200)
+        +galleryItem('stories/barelyautumn/fabianpoels_20171218_barelyautumn_soundcheck_web.jpg', '', 1797, 1200)
+        +galleryItem('stories/barelyautumn/fabianpoels_20171218_barelyautumn_backstage_web.jpg', '', 1797, 1200)
+        +galleryItem('stories/barelyautumn/fabianpoels_20171218_barelyautumn_thankyou_audience_web.jpg', '', 1797, 1200)
