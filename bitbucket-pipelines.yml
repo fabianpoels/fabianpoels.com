@@ -6,4 +6,4 @@ pipelines:
         - step:
             script:
               - sh /app/configure.sh $S3_ID $S3_SECRET
-              - sh /app/pusher.sh /opt/atlassian/pipelines/agent/build/dist $S3_BUCKET
+              - sh /app/pusher.sh /opt/atlassian/pipelines/agent/build/production $S3_BUCKET
