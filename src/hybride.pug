@@ -1,0 +1,23 @@
+extends stories.pug
+include pug/mixins.pug
+
+block page
+  title Hybride, Rocher de la Nausee
+  meta(name='description' content='Photo story about Hybride (8a) at Rocher de la Nausee, Anseremme (Belgium)')
+
+block mainContent
+  div#portfolio
+    +storiesNavigation('hybride')
+    article
+      p Hybride: a vertical 8a route with a lot of small crimps, bad feet and technical moves. It became the project of some friends, so I got quite some opportunities to capture the progress.
+      div#gallery
+        +galleryItem('stories/hybride/fabianpoels_20170805_0065_hybride_web.jpg', '', 1912, 1200)
+        +galleryItem('stories/hybride/fabianpoels_20170805_0078_hybride_web.jpg', '', 1886, 1200)
+        +galleryItem('stories/hybride/fabianpoels_20170910_0040_hybride_web.jpg', '', 801, 1200)
+        +galleryItem('stories/hybride/fabianpoels_20170910_0091_hybride_web.jpg', '', 787, 1200)
+        +galleryItem('stories/hybride/fabianpoels_20170910_0121_hybride_web.jpg', '', 801, 1200)
+        +galleryItem('stories/hybride/fabianpoels_20180218_0022_hybride_web.jpg', '', 801, 1200)
+        +galleryItem('stories/hybride/fabianpoels_20180218_0057_hybride_web.jpg', '', 802, 1200)
+        +galleryItem('stories/hybride/fabianpoels_20180218_0067_hybride_web.jpg', '', 802, 1200)
+        +galleryItem('stories/hybride/fabianpoels_20180218_0084_hybride_web.jpg', '', 801, 1200)
+        +galleryItem('stories/hybride/fabianpoels_20180218_0108_hybride_web.jpg', '', 1797, 1200)
