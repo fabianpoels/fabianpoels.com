@@ -9,7 +9,11 @@ block mainContent
   div#portfolio
     +storiesNavigation('tess')
     article
-      p A series of pictures I took for Tess Driessens, as she is building her website. We shot one day in Klimax, one of the biggest climbing gyms in Europe, and one day in Belgium's finest crag: Freyr
+      p
+        | A series of pictures I took for Tess Driessens, as she is building her
+        | 
+        a(href='http://motion-coaching.be/' target='_blank') website
+        | . We shot one day in Klimax, one of the biggest climbing gyms in Europe, and one day in Belgium's finest crag: Freyr
       div#gallery
         +galleryItem('stories/tess/fabianpoels_20171006_tess_klimax_web.jpg', 'Tess in the big roof of Klimax II', 1798, 1200)
         +galleryItem('stories/tess/fabianpoels_20171006_me_klimax_web.jpg', 'A semi-selfie while I was hanging from the lip of the roof in Klimax II, waiting for Tess to climb', 1798, 1200)
