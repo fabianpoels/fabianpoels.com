@@ -1,0 +1,27 @@
+extends stories.pug
+include pug/mixins.pug
+
+block page
+  title Berdorf
+  meta(name='description' content='Wanne Libot and Seb Berthe climbing hard in Berdorf')
+
+block mainContent
+  div#portfolio
+    +storiesNavigation('berdorf')
+    article
+      p
+      | The Waanterbach-crag is a beautiful sandstone cliff, hidden in the forest next to the small town of Berdorf. Often overcrowded during weekends, Belgian climbers Wanne Libot and
+      | 
+      a(href='https://www.facebook.com/Sebertheclimber/' target='_blank') Seb Berthe
+      |  used the much quieter weekdays and spring conditions to make quick work of two classic lines: Cima Ovest and Hasta la vista gringo.
+      div#gallery
+        +galleryItem('stories/berdorf/fabianpoels_20180409_wannelibot_cimaovest_0236_web.jpg', '', 802, 1200)
+        +galleryItem('stories/berdorf/fabianpoels_20180409_wannelibot_cimaovest_0264_web.jpg', '', 801, 1200)
+        +galleryItem('stories/berdorf/fabianpoels_20180409_wannelibot_cimaovest_0267_web.jpg', '', 801, 1200)
+        +galleryItem('stories/berdorf/fabianpoels_20180409_wannelibot_cimaovest_0306_web.jpg', '', 801, 1200)
+        +galleryItem('stories/berdorf/fabianpoels_20180409_wannelibot_cimaovest_0331_web.jpg', '', 801, 1200)
+        +galleryItem('stories/berdorf/fabianpoels_20180411_sebberthe_hastalavistagringo_0018_web.jpg', '', 1797, 1200)
+        +galleryItem('stories/berdorf/fabianpoels_20180411_sebberthe_hastalavistagringo_0020_web.jpg', '', 1797, 1200)
+        +galleryItem('stories/berdorf/fabianpoels_20180411_sebberthe_hastalavistagringo_0043_web.jpg', '', 802, 1200)
+        +galleryItem('stories/berdorf/fabianpoels_20180411_sebberthe_hastalavistagringo_0075_web.jpg', '', 801, 1200)
+        +galleryItem('stories/berdorf/fabianpoels_20180411_sebberthe_hastalavistagringo_0081_web.jpg', '', 801, 1200)

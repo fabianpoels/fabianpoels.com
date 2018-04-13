@@ -9,9 +9,9 @@ mixin navigation(page)
     else
       a(href='climbing.html') portfolio
     if (page=='stories')
-      a.active(href='hybride.html') stories
+      a.active(href='berdorf.html') stories
     else
-      a(href='hybride.html') stories
+      a(href='berdorf.html') stories
     if (page=='about')
       a.active(href='about.html') about
     else
@@ -41,6 +41,10 @@ mixin portfolioNavigation(page)
 
 mixin storiesNavigation(page)
   nav
+    if (page=='berdorf')
+      a.active(href='berdorf.html') Berdorf
+    else
+      a(href='berdorf.html') Berdorf
     if (page=='hybride')
       a.active(href='hybride.html') Hybride
     else
