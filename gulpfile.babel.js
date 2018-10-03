@@ -12,7 +12,7 @@ const paths = {
     dist: 'production'
   },
   assets: {
-    src: 'src/assets/*.*',
+    src: 'src/assets/**/*.*',
     dist: 'production/assets'
   },
   stylesheets: {
