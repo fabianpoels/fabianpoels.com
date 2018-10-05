@@ -21,3 +21,11 @@ mixin navigation(page)
       a.active(href='contact.html') Contact
     else
       a(href='contact.html') Contact
+
+mixin galleryItem(image, description, width, height)
+  a(href=image, data-fancybox='gallery', data-caption=description)
+    img(src=image, alt=description, width=width, height=height)
+
+mixin galleryItemWithThumb(image, thumb, description, width, height)
+  a(href=image, data-fancybox='gallery', data-caption=description)
+    img(src=thumb, alt=description, width=width, height=height)

@@ -7,6 +7,7 @@ import concat from 'gulp-concat'
 import uglify from 'gulp-uglify'
 
 const paths = {
+  src: 'src/**/*',
   pages: {
     src: 'src/*.pug',
     dist: 'production'
@@ -22,6 +23,10 @@ const paths = {
   javascript: {
     src: 'src/js/*.js',
     dist: 'production/js'
+  },
+  images: {
+    src: 'src/images/**/*.jpg',
+    dist: 'production/images'
   }
 }
 
@@ -54,11 +59,15 @@ export function pages() {
     .pipe(gulp.dest(paths.pages.dist))
 }
 
-export function watch() {
-  gulp.watch(paths.pages.src, pages)
-  gulp.watch(paths.stylesheets.src, styles)
+export function images() {
+  return gulp.src(paths.images.src)
+    .pipe(gulp.dest(paths.images.dist))
 }
 
-const build = gulp.series(clean, gulp.parallel(assets, styles, scripts, pages))
+export function watch() {
+  gulp.watch(paths.src, build)
+}
+
+const build = gulp.series(clean, gulp.parallel(assets, styles, scripts, pages, images))
 
 export default build

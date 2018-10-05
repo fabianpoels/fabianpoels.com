@@ -1,0 +1,24 @@
+extends pug/layout.pug
+include pug/mixins.pug
+
+block page
+  title Fabian Poels climbing and outdoor photography
+  meta(name='description' content='Fabian Poels climbing pictures portfolio')
+
+block navigation
+  +navigation('climbing')
+  
+block content
+  div#gallery
+    +galleryItemWithThumb('images/portfolio/climbing/fabianpoels_20180909_ciastlins.jpg', 'images/portfolio/climbing/fabianpoels_20180909_ciastlins_thumb.jpg', 'Stardust we are, Cascate di Ciastlins (ITALY)', 361, 540)
+    +galleryItemWithThumb('images/portfolio/climbing/fabianpoels_latelier_flo.jpg', 'images/portfolio/climbing/fabianpoels_latelier_flo_thumb.jpg', 'Crimping hard on the suberp rock at l\'atelier, vallon du Fournel (FRANCE)', 809, 540)
+    +galleryItemWithThumb('images/portfolio/climbing/fabianpoels_20180908_rienztal.jpg', 'images/portfolio/climbing/fabianpoels_20180908_rienztal_thumb.jpg', 'Rienztal (ITALY)', 809, 540)
+    +galleryItem('images/portfolio/climbing/fabianpoels_20180519_matthiasschiestl_stohlwond_bockhaus_jeeperscreepers_web.jpg', 'Matthias Schiestl in Jeepers Creepers, Bockhaus, Stohlwond (ITALY)', 787, 1200)
+    +galleryItemWithThumb('images/portfolio/climbing/fabianpoels_ailefroide_boulder.jpg', 'images/portfolio/climbing/fabianpoels_ailefroide_boulder_thumb.jpg', 'Bouldering in Ailefroide (FRANCE)', 361, 540)
+    +galleryItem('images/portfolio/climbing/fabianpoels_20180218_hybride_la_nausee_web.jpg', 'Crimping hard in Hybride, La Nausee (BELGIUM)', 802, 1200)
+    +galleryItem('images/portfolio/climbing/fabianpoels_20171013_manhattan_freyr_web.jpg', 'Local hero Yves cruising through Manhattan Transfer, Freyr (BELGIUM)', 1895, 1200)
+    +galleryItem('images/portfolio/climbing/fabianpoels_20170805_hybride_lanausee_web.jpg', 'Small crimps and bad feet in Hybride, La Nausee (BELGIUM)', 1912, 1200)
+    +galleryItem('images/portfolio/climbing/fabianpoels_20171105_ilcagasotto_gumbi_toirano_web.jpg', 'Slopy sidepulls in the crux of Il Cagasotto, sector Gumbi, Toirano (ITALY)', 1917, 1200)
+    +galleryItem('images/portfolio/climbing/fabianpoels_20171013_bayouninja_freyr_web.jpg', 'Ruben on the semi-rest before the last hard moves of Bayou-Ninja, Freyr (BELGIUM)', 802, 1200)
+    +galleryItem('images/portfolio/climbing/fabianpoels_20171103_taccheticche_bausu_web.jpg', 'Liesbeth on the technical start of Tacche Ticche - Bausu Centrale, Albenga (ITALY)', 2384, 1200)
+    +galleryItem('images/portfolio/climbing/fabianpoels_20170825_tetedegaulent_web.jpg', 'Halfway up an easy route on Tete de Gaulent (FRANCE)', 1798, 1200)

@@ -1,8 +1,8 @@
 $("#gallery").justifiedGallery({
-  rowHeight : 250,
+  rowHeight : 270,
   lastRow : 'nojustify',
   waitThumbnailsLoad : false,
-  margins : 10,
+  margins : 20,
   captions: false,
 }).on('jg.complete', function() {
   $("[data-fancybox]").fancybox({
@@ -13,5 +13,6 @@ $("#gallery").justifiedGallery({
     animationEffect : false,
     transitionEffect : false,
     backFocus : false,
-  });
-});
+    protect: true
+  })
+})

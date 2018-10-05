@@ -16,14 +16,16 @@ html
     <script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-105629062-1');</script>
 
   body
-    header
-      img(src='assets/logo.svg', width='70')
-      h1 FABIAN POELS
+    div#menu
+      a#logo-link(href="index.html")
+        img(src='assets/logo.svg', width='70')
+        h1 FABIAN POELS
       block navigation
-    block mainContent
-    block footer
-    block scripts
-      script(src='assets/js/jquery-3.3.1.min.js')
-      script(src='assets/js/jquery.fancybox.min.js')
-      script(src='assets/js/jquery.justifiedGallery.min.js')
-      script(src='js/main.min.js')
+    
+    div#content
+      block content
+      
+  script(src='assets/js/jquery-3.3.1.min.js')
+  script(src='assets/js/jquery.fancybox.min.js')
+  script(src='assets/js/jquery.justifiedGallery.min.js')
+  script(src='js/main.min.js')
