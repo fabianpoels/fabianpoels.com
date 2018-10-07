@@ -1,26 +1,27 @@
 mixin navigation(page)
-  h2 Portfolio
-  nav
-    if (page=='climbing')
-      a.active(href='climbing.html') climbing
-    else
-      a(href="climbing.html") climbing
-  h2 Stories
-  nav
-    if (page=='berdorf')
-      a.active(href='berdorf.html') berdorf
-    else
-      a(href='berdorf.html') berdorf
-  h2
-    if (page=='about')
-      a.active(href='about.html') About
-    else
-      a(href='about.html') About
-  h2
-    if (page=='contact')
-      a.active(href='contact.html') Contact
-    else
-      a(href='contact.html') Contact
+  div#navigation
+    h2 Portfolio
+    nav
+      if (page=='climbing')
+        a.active(href='climbing.html') climbing
+      else
+        a(href="climbing.html") climbing
+    h2 Stories
+    nav
+      if (page=='berdorf')
+        a.active(href='berdorf.html') berdorf
+      else
+        a(href='berdorf.html') berdorf
+    h2
+      if (page=='about')
+        a.active(href='about.html') About
+      else
+        a(href='about.html') About
+    h2
+      if (page=='contact')
+        a.active(href='contact.html') Contact
+      else
+        a(href='contact.html') Contact
 
 mixin galleryItem(image, description, width, height)
   a(href=image, data-fancybox='gallery', data-caption=description)

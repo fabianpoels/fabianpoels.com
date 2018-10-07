@@ -8,8 +8,10 @@ html
     block styles
       link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Oswald|Titillium+Web')
       link(rel='stylesheet', type='text/css', href='css/style.css')
+      link(rel='stylesheet', type='text/css', href='css/mobile.css')
       link(rel='stylesheet', type='text/css', href='assets/css/jquery.fancybox.min.css')
       link(rel='stylesheet', type='text/css', href='assets/css/justifiedGallery.min.css')
+      link(rel='stylesheet', type='text/css', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
     link(rel='icon', type='image/png', href='assets/favicon.png')
     <!-- Global Site Tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-105629062-1"></script>
@@ -20,12 +22,14 @@ html
       a#logo-link(href="index.html")
         img(src='assets/logo.svg', width='70')
         h1 FABIAN POELS
+      a#button(onclick="toggleMenu()")
+        i.fa.fa-bars.fa-5x
+        
       block navigation
     
     div#content
       block content
-      
-  script(src='assets/js/jquery-3.3.1.min.js')
-  script(src='assets/js/jquery.fancybox.min.js')
-  script(src='assets/js/jquery.justifiedGallery.min.js')
-  script(src='js/main.min.js')
+  
+  block scripts
+    script(src='assets/js/jquery-3.3.1.min.js')
+    script(src='js/menu.js')

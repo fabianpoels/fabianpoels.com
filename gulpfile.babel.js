@@ -45,9 +45,8 @@ export function styles() {
 }
 
 export function scripts() {
-  return gulp.src(paths.javascript.src, { sourcemaps: true })
+  return gulp.src(paths.javascript.src)
     .pipe(uglify())
-    .pipe(concat('main.min.js'))
     .pipe(gulp.dest(paths.javascript.dist))
 }
 

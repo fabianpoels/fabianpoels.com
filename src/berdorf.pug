@@ -1,0 +1,29 @@
+extends pug/layout.pug
+include pug/mixins.pug
+
+block page
+  title Fabian Poels climbing and outdoor photography
+  meta(name='description' content='Wanne Libot and Sebastien Berthe in Berdorf')
+
+block navigation
+  +navigation('berdorf')
+  
+block content
+  div#gallery
+    +galleryItemWithThumb('images/stories/berdorf/fabianpoels_wannelibot_cimaovest_01.jpg', 'images/stories/berdorf/fabianpoels_wannelibot_cimaovest_01_thumb.jpg', 'Wanne Libot in Cima Ovest (LUXEMBOURG)', 361, 540)
+    +galleryItemWithThumb('images/stories/berdorf/fabianpoels_wannelibot_cimaovest_02.jpg', 'images/stories/berdorf/fabianpoels_wannelibot_cimaovest_02_thumb.jpg', 'Wanne Libot in Cima Ovest (LUXEMBOURG)', 361, 540)
+    +galleryItemWithThumb('images/stories/berdorf/fabianpoels_wannelibot_cimaovest_03.jpg', 'images/stories/berdorf/fabianpoels_wannelibot_cimaovest_03_thumb.jpg', 'Wanne Libot in Cima Ovest (LUXEMBOURG)', 361, 540)
+    +galleryItemWithThumb('images/stories/berdorf/fabianpoels_wannelibot_cimaovest_04.jpg', 'images/stories/berdorf/fabianpoels_wannelibot_cimaovest_04_thumb.jpg', 'Wanne Libot in Cima Ovest (LUXEMBOURG)', 361, 540)
+    +galleryItemWithThumb('images/stories/berdorf/fabianpoels_wannelibot_cimaovest_05.jpg', 'images/stories/berdorf/fabianpoels_wannelibot_cimaovest_05_thumb.jpg', 'Wanne Libot in Cima Ovest (LUXEMBOURG)', 361, 540)
+    +galleryItemWithThumb('images/stories/berdorf/fabianpoels_wannelibot_cimaovest_06.jpg', 'images/stories/berdorf/fabianpoels_wannelibot_cimaovest_06_thumb.jpg', 'Wanne Libot in Cima Ovest (LUXEMBOURG)', 361, 540)
+    +galleryItemWithThumb('images/stories/berdorf/fabianpoels_wannelibot_cimaovest_07.jpg', 'images/stories/berdorf/fabianpoels_wannelibot_cimaovest_07_thumb.jpg', 'Wanne Libot in Cima Ovest (LUXEMBOURG)', 361, 540)
+    +galleryItemWithThumb('images/stories/berdorf/fabianpoels_sebastienberthe_hastalavistagringo_01.jpg', 'images/stories/berdorf/fabianpoels_sebastienberthe_hastalavistagringo_01_thumb.jpg', 'Sebastien Berthe in Hasta la vista gringo (LUXEMBOURG)', 361, 540)
+    +galleryItemWithThumb('images/stories/berdorf/fabianpoels_sebastienberthe_hastalavistagringo_02.jpg', 'images/stories/berdorf/fabianpoels_sebastienberthe_hastalavistagringo_02_thumb.jpg', 'Sebastien Berthe in Hasta la vista gringo (LUXEMBOURG)', 361, 540)
+    +galleryItemWithThumb('images/stories/berdorf/fabianpoels_sebastienberthe_hastalavistagringo_03.jpg', 'images/stories/berdorf/fabianpoels_sebastienberthe_hastalavistagringo_03_thumb.jpg', 'Sebastien Berthe in Hasta la vista gringo (LUXEMBOURG)', 361, 540)
+    +galleryItemWithThumb('images/stories/berdorf/fabianpoels_sebastienberthe_hastalavistagringo_04.jpg', 'images/stories/berdorf/fabianpoels_sebastienberthe_hastalavistagringo_04_thumb.jpg', 'Sebastien Berthe in Hasta la vista gringo (LUXEMBOURG)', 361, 540)
+    +galleryItemWithThumb('images/stories/berdorf/fabianpoels_sebastienberthe_hastalavistagringo_05.jpg', 'images/stories/berdorf/fabianpoels_sebastienberthe_hastalavistagringo_05_thumb.jpg', 'Sebastien Berthe in Hasta la vista gringo (LUXEMBOURG)', 361, 540)
+
+block append scripts
+  script(src='assets/js/jquery.fancybox.min.js')
+  script(src='assets/js/jquery.justifiedGallery.min.js')
+  script(src='js/imagegallery.js')
