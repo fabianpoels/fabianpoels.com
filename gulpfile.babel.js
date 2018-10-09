@@ -27,30 +27,39 @@ const paths = {
   images: {
     src: 'src/images/**/*.jpg',
     dist: 'production/images'
+  },
+  sitemap: {
+    src: 'sitemap/sitemap.xml',
+    dist: 'production/sitemap'
   }
 }
 
 export const clean = () => del([ 'production' ])
 
-export function assets() {
+export function assets () {
   return gulp.src(paths.assets.src)
     .pipe(gulp.dest(paths.assets.dist))
 }
 
-export function styles() {
+export function sitemap () {
+  return gulp.src(paths.sitemap.src)
+    .pipe(gulp.dest(paths.sitemap.dist))
+}
+
+export function styles () {
   return gulp.src(paths.stylesheets.src)
     .pipe(less())
     .pipe(cleanCSS())
     .pipe(gulp.dest(paths.stylesheets.dist))
 }
 
-export function scripts() {
+export function scripts () {
   return gulp.src(paths.javascript.src)
     .pipe(uglify())
     .pipe(gulp.dest(paths.javascript.dist))
 }
 
-export function pages() {
+export function pages () {
   return gulp.src(paths.pages.src)
     .pipe(pug({
       doctype: 'html'
@@ -58,15 +67,15 @@ export function pages() {
     .pipe(gulp.dest(paths.pages.dist))
 }
 
-export function images() {
+export function images () {
   return gulp.src(paths.images.src)
     .pipe(gulp.dest(paths.images.dist))
 }
 
-export function watch() {
+export function watch () {
   gulp.watch(paths.src, build)
 }
 
-const build = gulp.series(clean, gulp.parallel(assets, styles, scripts, pages, images))
+const build = gulp.series(clean, gulp.parallel(assets, sitemap, styles, scripts, pages, images))
 
 export default build
