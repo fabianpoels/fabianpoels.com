@@ -1,0 +1,29 @@
+extends pug/layout.pug
+include pug/mixins.pug
+
+block page
+  title Fabian Poels climbing and outdoor photography
+  meta(name='description' content='About Fabian Poels')
+
+block navigation
+  +navigation('about')
+  
+block content
+  article#about.text
+    p#description I'm an amateur photographer with a passion for rock climbing, being outdoor, drinking beer and not taking things too seriously. As I'm currently filling my portfolio, I take every chance I can get to learn and grow as a photographer.
+    h2 Likes
+    ul
+      li Moving across rock surfaces in various directions
+      li Shitting in the woods
+      li Digging holes for shitting in the woods
+      li Brewing coffee
+      li Taking pictures of rocks with people on them
+      li Waking up without an alarm clock
+    h2 Profession
+    ul
+      li Teaching people how not to die when climbing
+      li Inducing monkey-like behavior in kids aged 9 - 16
+      li Transforming talented skiers into mediocre snowboarders
+      li 
+        a(href='https://fabianpoels-resume.herokuapp.com/' target='_blank') Punching lines of code into computers
+      li Fulltime teacher and pupil at the school of life

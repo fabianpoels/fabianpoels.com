@@ -1,17 +1,23 @@
 mixin navigation(page)
-  div#navigation
-    h2 Portfolio
-    nav
-      if (page=='climbing')
-        a.active(href='climbing.html') climbing
-      else
-        a(href="climbing.html") climbing
-    h2 Stories
-    nav
-      if (page=='berdorf')
-        a.active(href='berdorf.html') berdorf
-      else
-        a(href='berdorf.html') berdorf
+  nav#navigation
+    h2.title Portfolio
+    if (page=='climbing')
+      a.active(href='climbing.html') Climbing
+    else
+      a(href="climbing.html") Climbing
+    h2.title Stories
+    if (page=='briancon')
+      a.active(href='briancon.html') Briancon
+    else
+      a(href='briancon.html') Briancon
+    if (page=='berdorf')
+      a.active(href='berdorf.html') Berdorf
+    else
+      a(href='berdorf.html') Berdorf
+    if (page=='barelyautumn')
+      a.active(href='barelyautumn.html') Barely Autumn
+    else
+      a(href='barelyautumn.html') Barely Autumn
     h2
       if (page=='about')
         a.active(href='about.html') About
