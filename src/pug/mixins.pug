@@ -5,7 +5,15 @@ mixin navigation(page)
       a.active(href='climbing.html') Climbing
     else
       a(href="climbing.html") Climbing
+    if (page=='portrait')
+      a.active(href='portrait.html') Portrait
+    else
+      a(href="portrait.html") Portrait
     h2.title Stories
+    if (page=='germany')
+      a.active(href='germany_tour.html') Germany tour
+    else
+      a(href='germany_tour.html') Germany tour
     if (page=='briancon')
       a.active(href='briancon.html') Briancon
     else
@@ -18,6 +26,10 @@ mixin navigation(page)
       a.active(href='barelyautumn.html') Barely Autumn
     else
       a(href='barelyautumn.html') Barely Autumn
+    if (page=='font')
+      a.active(href='fontainebleau.html') Fontainebleau
+    else
+      a(href='fontainebleau.html') Fontainebleau
     h2
       if (page=='about')
         a.active(href='about.html') About
