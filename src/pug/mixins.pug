@@ -10,6 +10,10 @@ mixin navigation(page)
     else
       a(href="portrait.html") Portrait
     h2.title Stories
+    if (page=='finale')
+      a.active(href='finale.html') Finale
+    else
+      a(href='finale.html') Finale
     if (page=='germany')
       a.active(href='germany_tour.html') Germany tour
     else
