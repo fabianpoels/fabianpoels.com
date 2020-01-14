@@ -5,11 +5,15 @@ mixin navigation(page)
       a.active(href='climbing.html') Climbing
     else
       a(href="climbing.html") Climbing
-    if (page=='portrait')
-      a.active(href='portrait.html') Portrait
+    if (page=='people')
+      a.active(href='people.html') People
     else
-      a(href="portrait.html") Portrait
+      a(href="people.html") People
     h2.title Stories
+    if (page=='lumignano')
+      a.active(href='lumignano.html') Lumignano
+    else
+      a(href='lumignano.html') Lumignano
     if (page=='kalymnos')
       a.active(href='kalymnos.html') Kalymnos
     else
