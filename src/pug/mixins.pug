@@ -9,6 +9,10 @@ mixin navigation(page)
       a.active(href='people.html') People
     else
       a(href="people.html") People
+    if (page=='landscape')
+      a.active(href='landscape.html') Landscape
+    else
+      a(href="landscape.html") Landscape
     h2.title Stories
     if (page=='lumignano')
       a.active(href='lumignano.html') Lumignano

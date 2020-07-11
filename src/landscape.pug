@@ -1,0 +1,21 @@
+extends pug/layout.pug
+include pug/mixins.pug
+
+block page
+  title Landscape portfolio
+  meta(name='description' content='Fabian Poels landscape portfolio')
+
+block navigation
+  +navigation('landscape')
+  
+block content
+  article#gallery
+    +galleryItemWithThumb('images/portfolio/landscape/fabianpoels_landscape_03.jpg', 'images/portfolio/landscape/fabianpoels_landscape_03_thumb.jpg', '', 809, 540)
+    +galleryItemWithThumb('images/portfolio/landscape/fabianpoels_landscape_04.jpg', 'images/portfolio/landscape/fabianpoels_landscape_04_thumb.jpg', '', 809, 540)
+    +galleryItemWithThumb('images/portfolio/landscape/fabianpoels_landscape_02.jpg', 'images/portfolio/landscape/fabianpoels_landscape_02_thumb.jpg', '', 808, 540)
+    +galleryItemWithThumb('images/portfolio/landscape/fabianpoels_landscape_01.jpg', 'images/portfolio/landscape/fabianpoels_landscape_01_thumb.jpg', '', 809, 540)
+    
+block append scripts
+  script(src='assets/js/jquery.fancybox.min.js')
+  script(src='assets/js/jquery.justifiedGallery.min.js')
+  script(src='js/imagegallery.js')
