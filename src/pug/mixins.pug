@@ -14,6 +14,10 @@ mixin navigation(page)
     else
       a(href="landscape.html") Landscape
     h2.title Stories
+    if (page=='arco')
+      a.active(href='arco.html') Arco
+    else
+      a(href='arco.html') Arco
     if (page=='lumignano')
       a.active(href='lumignano.html') Lumignano
     else
