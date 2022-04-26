@@ -1,4 +1,4 @@
-var landscapeImages = ['fabianpoels_cover_image_mountain_hq.jpg', 'fabianpoels_cover_image_mountain_hq_2.jpg']
+var landscapeImages = ['fabianpoels_cover_image_mountain_hq.jpg', 'fabianpoels_cover_image_mountain_hq_3.jpg']
 var portraitImages = []
 setBackground()
 
