@@ -5,5 +5,10 @@ block page
   title Fabian Poels
   meta(name='description' content='Fabian Poels')
 
+block content
+  div(class='image-buttons')
+    each val in [0, 1, 2, 3, 4]
+      div(class='image-button' id=`image-${val}` onclick = `setBackground(${val})`)
+
 block append scripts
   script(src='js/background.js')
