@@ -7,25 +7,25 @@ const landscapeImages = [
 ]
 const portraitImages = []
 let current_index
-setRandomBackground()
+// setRandomBackground()
+setBackground(0)
 
 document.addEventListener('keyup', (e) => {
   if (e.code === 'ArrowLeft' && current_index > 0) {
-    current_index--
+    setBackground(current_index - 1)
   }
   if (e.code === 'ArrowRight' && current_index < landscapeImages.length - 1) {
-    current_index++
+    setBackground(current_index + 1)
   }
-  setBackground()
 })
 
 function setRandomBackground() {
-  current_index = Math.floor(Math.random() * Math.floor(landscapeImages.length))
-  setBackground()
+  setBackground(Math.floor(Math.random() * Math.floor(landscapeImages.length)))
 }
 
-function setBackground() {
-  const image_url = landscapeImages[current_index]
+function setBackground(index) {
+  current_index = index
+  const image_url = landscapeImages[index]
   $('body').css({
     background: `url(images/covers/${image_url}) no-repeat center center fixed`,
     '-webkit-background-size': 'cover',
@@ -35,5 +35,5 @@ function setBackground() {
   })
 
   $('div.image-button').removeClass('selected')
-  $(`div#image-${current_index}`).addClass('selected')
+  $(`div#image-${index}`).addClass('selected')
 }
