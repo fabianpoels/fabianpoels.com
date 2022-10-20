@@ -1,0 +1,57 @@
+extends pug/layout.pug
+include pug/mixins.pug
+
+block page
+  title Fabian Poels Rock Palmares
+  meta(name='description' content='Fabian Poels')
+
+block content
+  -
+    var routes = [
+      { location: 'Tete de Gaulent', name: 'Les promesses de l’aube', length: '190m', grade: '6b', details:'' },
+      { location: 'Vallée d’Ailefroide - Orage d’étoiles', name: 'Rivière Kwaï', length: '450m', grade: '5c', details: '' },
+      { location: 'Tour Termier', name: 'Boucs en stocks', length: '280m', grade: '6b+', details: '' },
+      { location: 'Rocher du Pierron', name: 'Y a pas le feu au lac', length: '450m', grade: '6a', details: '' },
+      { location: 'Contrefort de Roche Robert', name: 'A la recherche de Peter Pan', length: '150m', grade: '7a', details: '', },
+      { location: 'Petite Aiguillette du Lauzet', name: 'Les Beaux Quartiers', length: '300m', grade: '6b+', details: '' },
+      { location: 'Rienzwand', name: 'Hat spass gemacht', length: '450m', grade: '6b', details: '' },
+      { location: 'Punta Lastoi / Spiz de Mondeval', name: 'Re Artu', length: '350m', grade: '6b+', details: '' },
+      { location: 'Kleine Zinne', name: 'Gelbe kante', length: '400m', grade: 'VI+', details: '' },
+      { location: 'Wilder Kaiser / Kopfkraxen', name: 'Blue moon', length: '500m', grade: '6a', details: '' },
+      { location: 'Piz Ciavazes', name: 'Gelbes Labyrinth', length: '275m', grade: '8-', details: ''},
+      { location: 'Parete del Limaro', name: 'Moonbears', length: '200m', grade: '5c', details: ''},
+      { location: 'Parete Croz dei Pini', name: 'Hasta siempre Commandante', length: '300m', grade: '6b+', details: ''},
+      { location: 'Martinswand', name: 'Beam me up Scotty / Flying grass', length: '150m', grade: 'VII-', details: ''},
+      { location: 'Placche Zebrate', name: 'Claudia', length: '400m', grade: '5c', details: ''},
+      { location: 'Punda di Soel (Pordoi)', name: 'Powerbank', length: '330m', grade: '7c', details: ''},
+      { location: 'Piz Ciavazes', name: 'Schubert', length: '250m', grade: 'VI', details: ''},
+      { location: 'Piccolo Falzarego', name: 'Comici', length: '220m', grade: 'V-', details: ''},
+      { location: 'Hexenstein', name: 'Ultima Tule', length: '220m', grade: '6c', details: ''},
+      { location: 'Rosengartenspitze', name: 'Normalweg', length: '200m', grade: 'III+', details: 'solo'},
+      { location: 'Vorgipfel des Zahnkofels', name: 'Groedner Bergfuhrerweg', length: '250m', grade: 'V+', details: ''},
+      { location: 'Erster Sellaturm', name: 'Trenker-fuhre', length: '165m', grade: 'V', details: ''},
+      { location: 'Daumen der Funffingerspitze', name: 'Nordkante', length: 'Daumenkante)', length: '350m', grade: 'IV', details: ''},
+      { location: 'Mur Occidentale de Pisciadu', name: 'Acquafun', length: '385m', grade: '6b', details: ''},
+      { location: 'Pala delle Guide', name: 'Gino Bellumat', length: '180m', grade: '6a+', details: ''},
+      { location: 'Peitlerkofel', name: 'Hruschka', length: '700m', grade: 'VI-', details: ''},
+      { location: 'Langkofel', name: 'Normalweg', length: '1500m', grade: 'III+', details: 'solo'},
+      { location: 'Delagoturm', name: 'Delagokante', length: '130m', grade: 'IV+', details: ''},
+      { location: 'Westlicher Trum der Meisules', name: 'Triathlon', length: '245m', grade: 'VI+', details: ''},
+      { location: 'Tofana di Mezzo', name: 'Via degli Scoiatolli / Via Dibona', length: '550m', grade: 'VII+ A2', details: ''},
+      { location: 'Torre Grande Nord (Cinque Torri)', name: 'Columbus', length: '105m', grade: '7a', details: ''},
+      { location: 'Hexenstein', name: 'Laubensassa', length: '250m', grade: 'VII', details: ''},
+      { location: 'Gusela del Nuvolau', name: 'Via mamma e papa', length: '320m', grade: 'VII+', details: ''},
+      { location: 'Gusela del Nuvolau', name: 'C’est plus facile', length: '200m', grade: '8a', details: ''},
+      { location: 'Durrenspitze (Kleiner Hochgall)', name: 'Facelift Integrale', length: '610m', grade: '6b+', details: ''},
+      { location: 'Sarner scharte', name: 'Engelskante', length: '350m', grade: 'VI', details: ''},
+      { location: 'Qornet el Ribâz', name: 'Jardiland', length: '150m', grade: '6a', details: ''},
+    ]
+  div(class='routes')
+    table
+      each val in routes
+        tr
+          td= val.location
+          td= val.name
+          td= val.length
+          td= val.grade
+          td= val.details
