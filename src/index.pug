@@ -6,6 +6,8 @@ block page
   meta(name='description' content='Fabian Poels')
 
 block content
+  each val in [0, 1, 2, 3, 4]
+    div(class='background' id=`background-${val}`)
   div(class='navigation')
     a(href="palmares.html")
       svg(xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512')

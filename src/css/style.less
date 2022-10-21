@@ -212,6 +212,7 @@ footer a {
 
 /* NAVIGATION */
 .navigation {
+  // z-index: 99;
   position: absolute;
   top: 0;
   left: 0;
@@ -230,6 +231,7 @@ footer a {
 
 /* BUTTONS */
 .image-buttons {
+  // z-index: 99;
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -268,4 +270,43 @@ footer a {
 
 .routes table {
   width: 690px;
+}
+
+/* LOAD IMAGES */
+.background {
+  position:absolute;
+  top: 0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.selected-background {
+  z-index: 0;
+  -webkit-background-size: cover !important;
+  -moz-background-size: cover !important;
+  -o-background-size: cover !important;
+  background-size: cover !important;
+}
+
+#background-0 {
+  background: url('../images/covers/fabianpoels_cover_image_mountain_hq_1.jpg') no-repeat center center fixed;
+}
+
+#background-1 {
+  background: url('../images/covers/fabianpoels_cover_image_mountain_hq_2.jpg') no-repeat center center fixed;
+}
+
+#background-2 {
+  background: url('../images/covers/fabianpoels_cover_image_mountain_hq_3.jpg') no-repeat center center fixed;
+}
+
+#background-3 {
+  background: url('../images/covers/fabianpoels_cover_image_mountain_hq_4.jpg') no-repeat center center fixed;
+}
+
+#background-4 {
+  background: url('../images/covers/fabianpoels_cover_image_mountain_hq_5.jpg') no-repeat center center fixed;
+
 }
