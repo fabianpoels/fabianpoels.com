@@ -211,21 +211,34 @@ footer a {
 }
 
 /* NAVIGATION */
-.navigation {
-  // z-index: 99;
+#navigation {
   position: absolute;
   top: 0;
   left: 0;
   padding: 35px;
+  display: flex;
+  flex-direction: row;
 }
 
-.navigation a svg {
+#navigation > .item {
+  width: 64px;
+  height: 64px;
+  margin-right: 35px;
+}
+
+
+.item a svg {
   width: 64px;
   height: 64px;
   opacity: 70%;
+  fill: #ebebeb;
 }
 
-.navigation a svg:hover {
+.item a svg.dark {
+  fill: #555;
+}
+
+.item a svg:hover {
   opacity: 100%;
 }
 
@@ -270,6 +283,12 @@ footer a {
 
 .routes table {
   width: 690px;
+}
+
+/* SPORT CLIMBING */
+.route-location {
+  font-size: 70%;
+  opacity: 90%;
 }
 
 /* LOAD IMAGES */

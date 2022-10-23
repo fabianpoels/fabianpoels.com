@@ -1,70 +1,14 @@
-mixin navigation(page)
+mixin navigation(mode)
   nav#navigation
-    h2.title Portfolio
-    if (page=='climbing')
-      a.active(href='climbing.html') Climbing
-    else
-      a(href="climbing.html") Climbing
-    if (page=='people')
-      a.active(href='people.html') People
-    else
-      a(href="people.html") People
-    if (page=='landscape')
-      a.active(href='landscape.html') Landscape
-    else
-      a(href="landscape.html") Landscape
-    h2.title Stories
-    if (page=='arco')
-      a.active(href='arco.html') Arco
-    else
-      a(href='arco.html') Arco
-    if (page=='lumignano')
-      a.active(href='lumignano.html') Lumignano
-    else
-      a(href='lumignano.html') Lumignano
-    if (page=='kalymnos')
-      a.active(href='kalymnos.html') Kalymnos
-    else
-      a(href='kalymnos.html') Kalymnos
-    if (page=='finale')
-      a.active(href='finale.html') Finale
-    else
-      a(href='finale.html') Finale
-    if (page=='germany')
-      a.active(href='germany_tour.html') Germany tour
-    else
-      a(href='germany_tour.html') Germany tour
-    if (page=='briancon')
-      a.active(href='briancon.html') Briancon
-    else
-      a(href='briancon.html') Briancon
-    if (page=='berdorf')
-      a.active(href='berdorf.html') Berdorf
-    else
-      a(href='berdorf.html') Berdorf
-    if (page=='barelyautumn')
-      a.active(href='barelyautumn.html') Barely Autumn
-    else
-      a(href='barelyautumn.html') Barely Autumn
-    if (page=='font')
-      a.active(href='fontainebleau.html') Fontainebleau
-    else
-      a(href='fontainebleau.html') Fontainebleau
-    h2
-      if (page=='about')
-        a.active(href='about.html') About
-      else
-        a(href='about.html') About
-    h2
-      if (page=='contact')
-        a.active(href='contact.html') Contact
-      else
-        a(href='contact.html') Contact
-
-mixin galleryItem(image, description, width, height)
-  a(href=image, data-fancybox='gallery', data-caption=description)
-    img(src=image, alt=description, width=width, height=height)
-
-mixin galleryItemWithThumb(image, thumb, description, width, height)
-  a(href=image, data-fancybox='gallery', data-caption=description)
-    img(src=thumb, alt=description, width=width, height=height)
+    div.item
+      a(href="index.html")
+        svg(xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' class=`${mode}`)
+          path(d="M149.1 64.8L138.7 96H64C28.7 96 0 124.7 0 160V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V160c0-35.3-28.7-64-64-64H373.3L362.9 64.8C356.4 45.2 338.1 32 317.4 32H194.6c-20.7 0-39 13.2-45.5 32.8zM256 384c-53 0-96-43-96-96s43-96 96-96s96 43 96 96s-43 96-96 96z")
+    div.item
+      a(href="palmares.html")
+        svg(xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' class=`${mode}`)
+          path(d="M256 32c12.5 0 24.1 6.4 30.7 17L503.4 394.4c5.6 8.9 8.6 19.2 8.6 29.7c0 30.9-25 55.9-55.9 55.9H55.9C25 480 0 455 0 424.1c0-10.5 3-20.8 8.6-29.7L225.2 49c6.6-10.6 18.3-17 30.8-17zm65 192L256 120.4 176.9 246.5 208 288l48-64h65z")
+    div.item
+      a(href="sport_climbing.html")
+        svg(xmlns='http://www.w3.org/2000/svg' viewBox='0 0 576 512' class=`${mode}`)
+          path(d='M184.1 38.2c9.9 8.9 10.7 24 1.8 33.9l-72 80c-4.4 4.9-10.6 7.8-17.2 7.9s-12.9-2.4-17.6-7L39 113c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l22.1 22.1 55.1-61.2c8.9-9.9 24-10.7 33.9-1.8zm0 160c9.9 8.9 10.7 24 1.8 33.9l-72 80c-4.4 4.9-10.6 7.8-17.2 7.9s-12.9-2.4-17.6-7L39 273c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l22.1 22.1 55.1-61.2c8.9-9.9 24-10.7 33.9-1.8zM256 96c0-17.7 14.3-32 32-32H512c17.7 0 32 14.3 32 32s-14.3 32-32 32H288c-17.7 0-32-14.3-32-32zm0 160c0-17.7 14.3-32 32-32H512c17.7 0 32 14.3 32 32s-14.3 32-32 32H288c-17.7 0-32-14.3-32-32zM192 416c0-17.7 14.3-32 32-32H512c17.7 0 32 14.3 32 32s-14.3 32-32 32H224c-17.7 0-32-14.3-32-32zM80 464c-26.5 0-48-21.5-48-48s21.5-48 48-48s48 21.5 48 48s-21.5 48-48 48z')
