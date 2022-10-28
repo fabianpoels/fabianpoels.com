@@ -59,7 +59,7 @@ block content
     table
       each val in routes
         tr
-          td
+          td(class='flag-cell')
             div(class=`flag fi fis fi-${val.country}`)
           td= val.location
           td= val.name
