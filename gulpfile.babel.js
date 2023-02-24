@@ -32,6 +32,10 @@ const paths = {
     src: 'sitemap/sitemap.xml',
     dist: 'production/sitemap',
   },
+  html_pages: {
+    src: 'src/*.html',
+    dist: 'production',
+  },
 }
 
 export const clean = () => deleteAsync(['production'])
@@ -63,6 +67,10 @@ export function pages() {
     .pipe(gulp.dest(paths.pages.dist))
 }
 
+export function html_pages() {
+  return gulp.src(paths.html_pages.src).pipe(gulp.dest(paths.html_pages.dist))
+}
+
 export function images() {
   return gulp.src(paths.images.src).pipe(gulp.dest(paths.images.dist))
 }
@@ -71,6 +79,6 @@ export function watch() {
   gulp.watch(paths.src, build)
 }
 
-const build = gulp.series(clean, gulp.parallel(assets, sitemap, styles, scripts, pages, images))
+const build = gulp.series(clean, gulp.parallel(assets, sitemap, styles, scripts, pages, html_pages, images))
 
 export default build
