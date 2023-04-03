@@ -6,12 +6,12 @@ block page
   meta(name='description' content='Fabian Poels')
 
 block content
-  each val in [0, 1, 2, 3, 4]
+  each val in [0, 1, 2, 3, 4, 5]
     div(class='background' id=`background-${val}`)
   +navigation
 
   div(class='image-buttons')
-    each val in [0, 1, 2, 3, 4]
+    each val in [0, 1, 2, 3, 4, 5]
       div(class='image-button' id=`image-${val}` onclick = `setBackground(${val})`)
 
 block append scripts
