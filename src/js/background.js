@@ -1,4 +1,4 @@
-const images_count = 6
+const images_count = 7
 let current_index
 
 setBackground(0)
