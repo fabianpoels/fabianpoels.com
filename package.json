@@ -4,7 +4,8 @@
   "description": "FABIANPOELS.COM",
   "main": "server.js",
   "scripts": {
-    "dev": "server.js"
+    "dev": "server.js",
+    "gulp": "gulp watch"
   },
   "repository": {
     "type": "git",
