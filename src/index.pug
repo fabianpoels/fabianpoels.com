@@ -5,14 +5,25 @@ block page
   title Fabian Poels
   meta(name='description' content='Fabian Poels')
 
-block content
-  each val in [0, 1, 2, 3, 4, 5, 6]
-    div(class='background' id=`background-${val}`)
-  +navigation
+block styles
+  link(rel='stylesheet', type='text/css', href='assets/css/jquery.fancybox.min.css')
+  link(rel='stylesheet', type='text/css', href='assets/css/justifiedGallery.min.css')
 
-  div(class='image-buttons')
-    each val in [0, 1, 2, 3, 4, 5, 6]
-      div(class='image-button' id=`image-${val}` onclick = `setBackground(${val})`)
+block content
+  +navigation('dark')
+  div#content
+    article#gallery
+      +galleryItemWithThumb('images/fabianpoels_climbing_finale_lubna.jpg', 'images/fabianpoels_climbing_finale_lubna_thumb.jpg', 'Lubna, Grotta dell\'Edera, Finale (ITALY)', 360, 540)
+      +galleryItemWithThumb('images/fabianpoels_landscape_langkofel.jpg', 'images/fabianpoels_landscape_langkofel_thumb.jpg', 'Langkofel, Dolomites (ITALY)', 809, 540)
+      +galleryItemWithThumb('images/fabianpoels_landscape_airplane.jpg', 'images/fabianpoels_landscape_airplane_thumb.jpg', 'Airplane', 360, 540)
+      +galleryItemWithThumb('images/fabianpoels_landscape_val_badia.jpg', 'images/fabianpoels_landscape_val_badia_thumb.jpg', 'Val Badia, Dolomites (ITALY)', 809, 540)
+      +galleryItemWithThumb('images/fabianpoels_climbing_cikola.jpg', 'images/fabianpoels_climbing_cikola_thumb.jpg', 'Nina Landekar on \'Grenguar\', Čikola (CROATIA)', 809, 540)
+      +galleryItemWithThumb('images/fabianpoels_landscape_krka.jpg', 'images/fabianpoels_landscape_krka_thumb.jpg', 'Krka national park (CROATIA)', 809, 540)
+      +galleryItemWithThumb('images/fabianpoels_landscape_frost.jpg', 'images/fabianpoels_landscape_frost_thumb.jpg', 'Frost', 361, 540)
+      +galleryItemWithThumb('images/fabianpoels_landscape_lagodigarda.jpg', 'images/fabianpoels_landscape_lagodigarda_thumb.jpg', 'Sunset on Lago di Garda (ITALY)', 361, 540)
+      +galleryItemWithThumb('images/fabianpoels_landscape_autumntrees.jpg', 'images/fabianpoels_landscape_autumntrees_thumb.jpg', 'Autumn trees', 809, 540)
 
 block append scripts
-  script(src='js/background.js')
+  script(src='assets/js/jquery.fancybox.min.js')
+  script(src='assets/js/jquery.justifiedGallery.min.js')
+  script(src='js/imagegallery.js')
