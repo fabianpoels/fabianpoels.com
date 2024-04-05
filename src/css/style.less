@@ -71,32 +71,6 @@ body {
   font-family: 'Titillium Web', sans-serif;
 }
 
-/* MAIN CONTENT */
-#content {
-  position: absolute;
-  top: 100px;
-  min-height: calc(100% - 100px);
-  width: 100%;
-}
-
-article {
-  width: 90%;
-  margin: 40px auto;
-  color: @grey-text;
-}
-
-article.text {
-  width: 60%;
-}
-
-article h2, article h3 {
-  font-weight: normal;
-}
-
-article ul {
-  list-style-type: none;
-}
-
 .fancybox__backdrop {
   background: #000;
 }
@@ -112,20 +86,15 @@ article ul {
 
 /* FOOTER */
 footer {
-  position: absolute;
-  bottom: 0;
-  right: 0;
+  position: relative;
+  padding-bottom: 10px;
+  margin-right: 10px;
   text-align: right;
-  margin-bottom: 20px;
-  margin-right: 20px;
-  font-weight: normal;
 }
 
 /* NAVIGATION */
 #navigation {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative;
   padding: 35px;
   display: flex;
   flex-direction: row;
@@ -136,7 +105,6 @@ footer {
   height: 64px;
   margin-right: 35px;
 }
-
 
 .item a svg {
   width: 64px;
@@ -153,43 +121,10 @@ footer {
   opacity: 100%;
 }
 
-/* BUTTONS */
-.image-buttons {
-  // z-index: 99;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.image-button {
-  height: 30px;
-  width: 30px;
-  margin-left: 30px;
-  margin-right: 30px;
-  border-radius: 50%;
-  background-color: #ebebeb;
-  opacity: 60%;
-  cursor: pointer;
-}
-
-.image-button:hover {
-  opacity: 90%;
-}
-
-.selected {
-  opacity: 90%;
-  cursor: auto;
-}
-
 /* PALMARES */
 .routes {
   width: 690px;
   margin: auto;
-  padding-top: 50px;
 }
 
 .routes table {
@@ -207,50 +142,4 @@ footer {
 .route-location {
   font-size: 70%;
   opacity: 90%;
-}
-
-/* LOAD IMAGES */
-.background {
-  position:absolute;
-  top: 0;
-  left:0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-}
-
-.selected-background {
-  z-index: 0;
-  -webkit-background-size: cover !important;
-  -moz-background-size: cover !important;
-  -o-background-size: cover !important;
-  background-size: cover !important;
-}
-
-#background-0 {
-  background: url('../images/covers/fabianpoels_cover_image_mountain_hq_9.jpg') no-repeat center center fixed;
-}
-
-#background-1 {
-  background: url('../images/covers/fabianpoels_cover_image_mountain_hq_8.jpg') no-repeat center center fixed;
-}
-
-#background-2 {
-  background: url('../images/covers/fabianpoels_cover_image_mountain_hq_7.jpg') no-repeat center center fixed;
-}
-
-#background-3 {
-  background: url('../images/covers/fabianpoels_cover_image_mountain_hq_6.jpg') no-repeat center center fixed;
-}
-
-#background-4 {
-  background: url('../images/covers/fabianpoels_cover_image_mountain_hq_2.jpg') no-repeat center center fixed;
-}
-
-#background-5 {
-  background: url('../images/covers/fabianpoels_cover_image_mountain_hq_4.jpg') no-repeat center center fixed;
-}
-
-#background-6 {
-  background: url('../images/covers/fabianpoels_cover_image_mountain_hq_5.jpg') no-repeat center center fixed;
 }
