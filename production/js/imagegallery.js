@@ -1,1 +1,1 @@
-$("#gallery").justifiedGallery({rowHeight:270,lastRow:"nojustify",waitThumbnailsLoad:!1,margins:20,captions:!1}),Fancybox.bind('[data-fancybox="gallery"]',{Thumbs:!1,Toolbar:{display:{left:[],middle:[],right:["fullscreen","close"]}},on:{"*":(a,l)=>{console.log("Fancybox eventName: "+l)}}});
+$("#gallery").justifiedGallery({rowHeight:270,lastRow:"nojustify",waitThumbnailsLoad:!1,margins:20,captions:!1}),Fancybox.bind('[data-fancybox="gallery"]',{Thumbs:!1,Toolbar:{display:{left:[],middle:[],right:["fullscreen","close"]}}});
