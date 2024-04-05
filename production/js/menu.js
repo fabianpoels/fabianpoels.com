@@ -1,1 +1,0 @@
-function toggleMenu(){var e=document.getElementById("navigation"),a=document.getElementById("button"),t=document.getElementById("content");"visible"===e.className?(e.className="",a.className="",t.className=""):(e.className="visible",a.className="active",t.className="menu-active")}
