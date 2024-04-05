@@ -72,73 +72,6 @@ body {
   font-family: 'Titillium Web', sans-serif;
 }
 
-/*  LEFT SIDE MENU */
-#menu {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 240px;
-  height: calc(100% - 20px);
-  background: rgba(235, 235, 235, .85);
-  font-weight: normal;
-  padding: 20px 20px 0;
-  overflow-y: auto;
-}
-
-#logo-link {
-  display: block;
-  text-decoration: none;
-  opacity: .7;
-  &:hover {
-    opacity: .9;
-  }
-}
-
-#button {
-  display: none;
-}
-
-#logo-link img {
-  display: block;
-  width: 70px;
-  margin: 0 auto;
-}
-
-#logo-link h1 {
-  margin-top: -30px;
-  font-family: 'Oswald', sans-serif;
-  font-weight: bold;
-  color: @grey-text;
-  align-self: center;
-  border: none;
-  text-align: center;
-}
-
-nav h2 {
-  color: @grey-text;
-  opacity: .8;
-  margin-bottom: 0px;
-  font-weight: normal;
-}
-
-nav h2 a {
-  opacity: 1;
-  margin-left: 0;
-}
-
-nav a {
-  display: block;
-  margin-left: 20px;
-  margin-top: 0px;
-  color: @grey-text;
-  opacity: .8;
-  text-decoration: none;
-  &:hover, &.active {
-    color: @link-hover;
-    opacity: 1;
-  }
-}
-
 /* MAIN CONTENT */
 #content {
   position: absolute;
@@ -175,17 +108,17 @@ article ul {
   list-style-type: none;
 }
 
-.fancybox-container .fancybox-bg {
+.fancybox__backdrop {
   background: #000;
 }
 
-.fancybox-is-open .fancybox-bg {
-  opacity: 1 !important;
-}
-
-.fancybox-caption {
+.fancybox__caption {
   font-family: 'Titillium Web', sans-serif;
   font-size: 16px;
+}
+
+.fancybox-image {
+  pointer-events: none;
 }
 
 /* FOOTER */

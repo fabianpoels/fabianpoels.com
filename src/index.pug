@@ -6,7 +6,7 @@ block page
   meta(name='description' content='Fabian Poels')
 
 block styles
-  link(rel='stylesheet', type='text/css', href='assets/css/jquery.fancybox.min.css')
+  link(rel='stylesheet', type='text/css', href='assets/css/fancybox.css')
   link(rel='stylesheet', type='text/css', href='assets/css/justifiedGallery.min.css')
 
 block content
@@ -22,8 +22,9 @@ block content
       +galleryItemWithThumb('images/fabianpoels_landscape_frost.jpg', 'images/fabianpoels_landscape_frost_thumb.jpg', 'Frost', 361, 540)
       +galleryItemWithThumb('images/fabianpoels_landscape_lagodigarda.jpg', 'images/fabianpoels_landscape_lagodigarda_thumb.jpg', 'Sunset on Lago di Garda (ITALY)', 361, 540)
       +galleryItemWithThumb('images/fabianpoels_landscape_autumntrees.jpg', 'images/fabianpoels_landscape_autumntrees_thumb.jpg', 'Autumn trees', 809, 540)
+      +galleryItemWithThumb('images/fabianpoels_portrait_italianguy.jpg', 'images/fabianpoels_portrait_italianguy_thumb.jpg', 'Italian guy', 809, 540)
 
 block append scripts
-  script(src='assets/js/jquery.fancybox.min.js')
+  script(src='assets/js/fancybox.umd.js')
   script(src='assets/js/jquery.justifiedGallery.min.js')
   script(src='js/imagegallery.js')

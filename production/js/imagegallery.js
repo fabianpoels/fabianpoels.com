@@ -1,1 +1,1 @@
-$("#gallery").justifiedGallery({rowHeight:270,lastRow:"nojustify",waitThumbnailsLoad:!1,margins:20,captions:!1}).on("jg.complete",function(){$("[data-fancybox]").fancybox({loop:!0,idleTime:2,margin:[20,0],buttons:["fullScreen","close"],backFocus:!1,protect:!0})});
+$("#gallery").justifiedGallery({rowHeight:270,lastRow:"nojustify",waitThumbnailsLoad:!1,margins:20,captions:!1}),Fancybox.bind('[data-fancybox="gallery"]',{Thumbs:!1,Toolbar:{display:{left:[],middle:[],right:["fullscreen","close"]}},on:{"*":(a,l)=>{console.log("Fancybox eventName: "+l)}}});
