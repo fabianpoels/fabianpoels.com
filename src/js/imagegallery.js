@@ -3,7 +3,7 @@ $('#gallery').justifiedGallery({
   lastRow: 'nojustify',
   waitThumbnailsLoad: false,
   margins: 20,
-  captions: false
+  captions: false,
 })
 
 Fancybox.bind('[data-fancybox="gallery"]', {
@@ -12,7 +12,17 @@ Fancybox.bind('[data-fancybox="gallery"]', {
     display: {
       left: [],
       middle: [],
-      right: ["fullscreen", "close"],
+      right: ['fullscreen', 'close'],
     },
-  }
+  },
+  on: {
+    'Carousel.ready Carousel.settle': (fancybox) => {
+      const slide = fancybox.getSlide()
+      if (slide && slide.src) {
+        gtag('event', 'view_image', {
+          'image_name': slide.src
+        });
+      }
+    },
+  },
 })
