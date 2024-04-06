@@ -25,5 +25,14 @@ Fancybox.bind('[data-fancybox="gallery"]', {
         });
       }
     },
+    'Carousel.click': fancybox => {
+      const slide = fancybox.getSlide()
+      if (slide && slide.src) {
+        const name = slide.src.split('fabianpoels_')[1].split('.jpg')[0]
+        gtag('event', `click_image_${name}`, {
+          'image_name': name
+        });
+      }
+    }
   },
 })
