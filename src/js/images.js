@@ -26,8 +26,8 @@ while (currentIndex != 0) {
   [images[currentIndex], images[randomIndex]] = [images[randomIndex], images[currentIndex]]
 }
 
+article = document.getElementById('gallery')
 images.forEach(image => {
-  article = document.getElementById('gallery')
   // create a element
   a_el = document.createElement('a')
   a_el.setAttribute('href', '#')
@@ -46,3 +46,5 @@ images.forEach(image => {
   a_el.appendChild(img_el)
   article.appendChild(a_el)
 })
+
+article.style.display = 'block'
