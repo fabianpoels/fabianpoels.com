@@ -32,7 +32,7 @@ images.forEach(image => {
   a_el = document.createElement('a')
   a_el.setAttribute('href', '#')
   a_el.setAttribute('data-src', `images/${image.name}.jpg`)
-  a_el.setAttribute('data.fancybox', 'gallery')
+  a_el.setAttribute('data-fancybox', 'gallery')
   a_el.setAttribute('data-caption', image.description)
 
   // create img element
