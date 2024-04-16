@@ -18,6 +18,14 @@ let images = [
   { name: 'fabianpoels_portrait_italianbride', description: 'Italian bride', width: 361, heigth: 540 },
 ]
 
+let counter = 0
+
+function image_loaded(img) {
+  img.removeEventListener('load', image_loaded)
+  counter++
+  if (counter === images.length) show_gallery()
+}
+
 let currentIndex = images.length
 
 while (currentIndex != 0) {
@@ -25,8 +33,7 @@ while (currentIndex != 0) {
   currentIndex--
   [images[currentIndex], images[randomIndex]] = [images[randomIndex], images[currentIndex]]
 }
-
-article = document.getElementById('gallery')
+let article = document.getElementById('gallery')
 images.forEach(image => {
   // create a element
   a_el = document.createElement('a')
@@ -36,15 +43,55 @@ images.forEach(image => {
   a_el.setAttribute('data-caption', image.description)
 
   // create img element
-  img_el = document.createElement('img')
-  img_el.setAttribute('src', `images/${image.name}_thumb.jpg`)
+  let img_el = new Image(image.width, image.heigth)
+  img_el.addEventListener('load', image_loaded(img_el))
   img_el.setAttribute('alt', image.description)
-  img_el.setAttribute('width', image.width)
-  img_el.setAttribute('height', image.height)
   img_el.setAttribute('class', 'thumbnail')
-
+  img_el.src = `images/${image.name}_thumb.jpg`
+  
   a_el.appendChild(img_el)
   article.appendChild(a_el)
 })
 
-article.style.display = 'block'
+function show_gallery() {
+  article.style.display = 'block'
+
+  $('#gallery').justifiedGallery({
+    rowHeight: 270,
+    lastRow: 'nojustify',
+    waitThumbnailsLoad: false,
+    margins: 20,
+    captions: false,
+  })
+  
+  Fancybox.bind('[data-fancybox="gallery"]', {
+    Thumbs: false,
+    Toolbar: {
+      display: {
+        left: [],
+        middle: [],
+        right: ['fullscreen', 'close'],
+      },
+    },
+    on: {
+      'Carousel.ready Carousel.settle': (fancybox) => {
+        const slide = fancybox.getSlide()
+        if (slide && slide.src) {
+          const name = slide.src.split('fabianpoels_')[1].split('.jpg')[0]
+          gtag('event', `view_image_${name}`, {
+            'image_name': name
+          });
+        }
+      },
+      'Carousel.click': fancybox => {
+        const slide = fancybox.getSlide()
+        if (slide && slide.src) {
+          const name = slide.src.split('fabianpoels_')[1].split('.jpg')[0]
+          gtag('event', `click_image_${name}`, {
+            'image_name': name
+          });
+        }
+      }
+    },
+  })
+}
