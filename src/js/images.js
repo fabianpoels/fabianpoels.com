@@ -1,9 +1,9 @@
 let images = [
-  { name: 'fabianpoels_climbing_finale_lubna', description: 'Lubna, Grotta dell\'Edera, Finale (ITALY)', width: 360, heigth: 540 },
+  { name: 'fabianpoels_climbing_finale_lubna', description: "Lubna, Grotta dell'Edera, Finale (ITALY)", width: 360, heigth: 540 },
   { name: 'fabianpoels_landscape_langkofel', description: 'Langkofel, Dolomites (ITALY)', width: 809, heigth: 540 },
   { name: 'fabianpoels_landscape_airplane', description: 'Airplane', width: 360, heigth: 540 },
   { name: 'fabianpoels_landscape_val_badia', description: 'Val Badia, Dolomites (ITALY)', width: 809, heigth: 540 },
-  { name: 'fabianpoels_climbing_cikola', description: 'Nina Landekar on \'Grenguar\', Čikola (CROATIA)', width: 809, heigth: 540 },
+  { name: 'fabianpoels_climbing_cikola', description: "Nina Landekar on 'Grenguar', Čikola (CROATIA)", width: 809, heigth: 540 },
   { name: 'fabianpoels_landscape_krka', description: 'Krka national park (CROATIA)', width: 809, heigth: 540 },
   { name: 'fabianpoels_landscape_frost', description: 'Frost', width: 361, heigth: 540 },
   { name: 'fabianpoels_landscape_lagodigarda', description: 'Sunset on Lago di Garda (ITALY)', width: 361, heigth: 540 },
@@ -21,8 +21,10 @@ let images = [
 let counter = 0
 
 function image_loaded(img) {
+  console.log
   img.removeEventListener('load', image_loaded)
   counter++
+  console.log(counter)
   if (counter === images.length) show_gallery()
 }
 
@@ -31,10 +33,10 @@ let currentIndex = images.length
 while (currentIndex != 0) {
   let randomIndex = Math.floor(Math.random() * currentIndex)
   currentIndex--
-  [images[currentIndex], images[randomIndex]] = [images[randomIndex], images[currentIndex]]
+  ;[images[currentIndex], images[randomIndex]] = [images[randomIndex], images[currentIndex]]
 }
 let article = document.getElementById('gallery')
-images.forEach(image => {
+images.forEach((image) => {
   // create a element
   a_el = document.createElement('a')
   a_el.setAttribute('href', '#')
@@ -44,7 +46,7 @@ images.forEach(image => {
 
   // create img element
   let img_el = new Image(image.width, image.heigth)
-  img_el.addEventListener('load', image_loaded(img_el))
+  // img_el.addEventListener('load', image_loaded(img_el))
   img_el.setAttribute('alt', image.description)
   img_el.setAttribute('class', 'thumbnail')
   img_el.src = `images/${image.name}_thumb.jpg`
@@ -53,17 +55,19 @@ images.forEach(image => {
   article.appendChild(a_el)
 })
 
+show_gallery()
+
 function show_gallery() {
   article.style.display = 'block'
 
   $('#gallery').justifiedGallery({
     rowHeight: 270,
     lastRow: 'nojustify',
-    waitThumbnailsLoad: false,
+    waitThumbnailsLoad: true,
     margins: 20,
     captions: false,
   })
-  
+
   Fancybox.bind('[data-fancybox="gallery"]', {
     Thumbs: false,
     Toolbar: {
@@ -79,19 +83,19 @@ function show_gallery() {
         if (slide && slide.src) {
           const name = slide.src.split('fabianpoels_')[1].split('.jpg')[0]
           gtag('event', `view_image_${name}`, {
-            'image_name': name
-          });
+            image_name: name,
+          })
         }
       },
-      'Carousel.click': fancybox => {
+      'Carousel.click': (fancybox) => {
         const slide = fancybox.getSlide()
         if (slide && slide.src) {
           const name = slide.src.split('fabianpoels_')[1].split('.jpg')[0]
           gtag('event', `click_image_${name}`, {
-            'image_name': name
-          });
+            image_name: name,
+          })
         }
-      }
+      },
     },
   })
 }
