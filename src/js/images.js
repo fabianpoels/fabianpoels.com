@@ -16,6 +16,7 @@ let images = [
   { name: 'fabianpoels_landscape_rain', description: 'Rain', width: 808, heigth: 540 },
   { name: 'fabianpoels_climbing_menhir', description: 'Thomas Prenn on Menhir, Passo Gardena, Dolomites (ITALY)', width: 361, heigth: 540 },
   { name: 'fabianpoels_portrait_italianbride', description: 'Italian bride', width: 361, heigth: 540 },
+  { name: 'fabianpoels_landscape_dolomites_storm', description: 'Storm in the dolomites', width: 809, heigth: 540 },
 ]
 
 let currentIndex = images.length
