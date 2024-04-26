@@ -36,6 +36,10 @@ const paths = {
     src: 'src/*.html',
     dist: 'production',
   },
+  cv: {
+    src: 'src/*.pdf',
+    dist: 'production',
+  },
 }
 
 export const clean = () => deleteAsync(['production'])
@@ -75,10 +79,14 @@ export function images() {
   return gulp.src(paths.images.src).pipe(gulp.dest(paths.images.dist))
 }
 
+export function cv() {
+  return gulp.src(paths.cv.src).pipe(gulp.dest(paths.cv.dist))
+}
+
 export function watch() {
   gulp.watch(paths.src, build)
 }
 
-const build = gulp.series(clean, gulp.parallel(assets, sitemap, styles, scripts, pages, html_pages, images))
+const build = gulp.series(clean, gulp.parallel(assets, sitemap, styles, scripts, pages, html_pages, images, cv))
 
 export default build
